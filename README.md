@@ -14,6 +14,10 @@ git pull origin master
 
 #Na commit:
 
+ak ste vytvorili novy zlozku tak:
+
+git add -A
+
 git commit -a -m "SPRAVA KTORU TAM CHCETE PRIDAT"
 
 git push origin master
