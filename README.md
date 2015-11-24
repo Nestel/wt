@@ -2,7 +2,7 @@
 
 #Inicializacia repo
 
-v terminaly chod do zlozky kde mas projekt a rob nasledovne:
+v terminali chod do zlozky kde mas projekt a rob nasledovne:
 
 git init
 
