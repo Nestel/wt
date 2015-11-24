@@ -14,9 +14,11 @@ git pull origin master
 
 #Na commit:
 
-ak ste vytvorili novy zlozku tak:
+ak ste vytvorili novy subor tak treba este aj 
 
 git add -A
+
+--
 
 git commit -a -m "SPRAVA KTORU TAM CHCETE PRIDAT"
 
