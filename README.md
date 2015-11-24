@@ -1,12 +1,14 @@
 # wt
 
+#Inicializacia repo
+
 git init
 
 git remote add origin https://github.com/Nestel/wt
 
 git pull origin master
 
-==
+--
 
 #Na commit:
 
