@@ -36,17 +36,6 @@ function initialize() {
         title: name[i]
       });
     } 
-    
-///----------------------------
- /*   var myLatLang = {lat: Number(x[0]), lng: Number(y[0])};//{lat: 48.4195699, lng: 17.7873566};
-    
-    var marker = new google.maps.Marker({
-      position: myLatLang,
-      map: map,
-      title: name[0]
-    });
-*/
-//=---------------------------
   });
 }
 
