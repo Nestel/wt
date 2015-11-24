@@ -1,5 +1,14 @@
 # wt
 
+#Pamiatky:
+	Omo - Hlohovec zamok
+	Omo - Hurbanovo hvezdaren
+
+	Vierka - Bojnice hradna studna
+	Vierka - Kralova pri Senci most
+
+!	yberte si pamiatky a napiste mi ich sem pls, potrebujem to dat do mapy. Dakujem
+
 #Inicializacia repo
 
 v terminali chod do zlozky kde mas projekt a rob nasledovne:
@@ -41,12 +50,3 @@ git push origin master
 ZVYSOK: Gabo
 
 Ked vas nieco napadne tak to zmente
-
-#Pamiatky:
-	Omo - Hlohovec zamok
-	Omo - Hurbanovo hvezdaren
-
-	Vierka - Bojnice hradna studna
-	Vierka - Kralova pri Senci most
-
-Vyberte si pamiatky a napiste mi ich sem pls, potrebujem to dat do mapy. Dakujem
