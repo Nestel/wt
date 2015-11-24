@@ -7,7 +7,7 @@
 	Vierka - Bojnice hradna studna
 	Vierka - Kralova pri Senci most
 
-!	yberte si pamiatky a napiste mi ich sem pls, potrebujem to dat do mapy. Dakujem
+	Vyberte si pamiatky a napiste mi ich sem pls, potrebujem to dat do mapy. Dakujem
 
 #Inicializacia repo
 
