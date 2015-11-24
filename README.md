@@ -23,3 +23,21 @@ git add -A
 git commit -a -m "SPRAVA KTORU TAM CHCETE PRIDAT"
 
 git push origin master
+
+--
+
+#Ulohy
+
+1. Gabo
+2. Gabo
+3. Jano
+4. Matus
+5. Vierka
+6. Vierka
+7. Omo
+8. Gabo
+9. VSETCI
+10. VSETCI
+ZVYSOK: Gabo
+
+Ked vas nieco napadne tak to zmente
