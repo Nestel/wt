@@ -9,8 +9,11 @@
 
 	Nestel - Bratislava 3-Nové Mesto Sklad muničný
 	Nestel - Bratislava 2-Ružinov Továreň
-
-	Vyberte si pamiatky a napiste mi ich sem pls, potrebujem to dat do mapy. Dakujem
+	
+	Jano - Bratislava Stary most
+	Jano - Skalnate pleso hvezdaren
+	
+	Uz len Matus chyba!
 
 #Inicializacia repo
 
