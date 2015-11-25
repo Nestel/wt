@@ -7,7 +7,13 @@
 	Vierka - Bojnice hradna studna
 	Vierka - Kralova pri Senci most
 
-	Vyberte si pamiatky a napiste mi ich sem pls, potrebujem to dat do mapy. Dakujem
+	Nestel - Bratislava 3-Nové Mesto Sklad muničný
+	Nestel - Bratislava 2-Ružinov Továreň
+	
+	Jano - Bratislava Stary most
+	Jano - Skalnate pleso hvezdaren
+	
+	Uz len Matus chyba!
 
 #Inicializacia repo
 
