@@ -13,7 +13,9 @@
 	Jano - Bratislava Stary most
 	Jano - Skalnate pleso hvezdaren
 	
-	Uz len Matus chyba!
+	Matúš - Košice Stará sladovňa
+	Matúš - Betliar Kaštieľ s areálom
+
 
 #Inicializacia repo
 
