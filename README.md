@@ -1,8 +1,25 @@
 # wt
 
+#Pamiatky:
+	Omo - Hlohovec zamok
+	Omo - Hurbanovo hvezdaren
+
+	Vierka - Bojnice hradna studna
+	Vierka - Kralova pri Senci most
+
+	Nestel - Bratislava 3-Nové Mesto Sklad muničný
+	Nestel - Bratislava 2-Ružinov Továreň
+	
+	Jano - Bratislava Stary most
+	Jano - Skalnate pleso hvezdaren
+	
+	Matúš - Košice Stará sladovňa
+	Matúš - Betliar Kaštieľ s areálom
+
+
 #Inicializacia repo
 
-v terminaly chod do zlozky kde mas projekt a rob nasledovne:
+v terminali chod do zlozky kde mas projekt a rob nasledovne:
 
 git init
 
