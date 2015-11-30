@@ -90,3 +90,19 @@ input.noted
     -moz-border-radius:6px 0 6px 6px;
     border-radius:6px 0 6px 6px;
 }
+
+#meno
+{
+    width: 120px;
+}
+
+#datum
+{
+    width: 80px;
+}
+
+#dnesnyDatum, #dnesneMeniny
+{
+    padding: 10px;
+    padding-top: 15px;
+}

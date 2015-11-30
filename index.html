@@ -6,18 +6,21 @@
 
 		<title>Záverečná práca | EliteGroup</title>
 
-		<!-- main css file -->
-		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<!-- bootstrap css -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" crossorigin="anonymous">
+
+		<!-- main css file -->
+		<link rel="stylesheet" type="text/css" href="css/style.css">
 
 		<!-- jquery -->
 		<script src="js/jquery.js"></script>
 		<!-- bootstrap javascript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" crossorigin="anonymous"></script>
 		<!-- menu javascript -->
-		<script defer src="js/menu.js"></script> 
+		<script src="js/menu.js"></script>
+		<!-- meniny javascript-->
+		<script src="js/meniny.js" ></script>
 	</head>
 	<body>
 		<nav class="navbar navbar-default">
@@ -38,17 +41,41 @@
 					<ul id="navbar" class="nav navbar-nav">
 						
 					</ul>
-					<ul class="nav navbar-nav navbar-right">	
-						<form class="navbar-form navbar-right" role="search">
-							<div class="form-group">
-								<input type="text" class="form-control" placeholder="Dátum/meno">
+					<ul class="nav navbar-nav navbar-right">
+						<li>			
+							<div id="dnesnyDatum">
 							</div>
-							<button type="submit" class="btn btn-default">Nájdi dátum/meno</button>
-						</form>
+						</li>
+						<li>
+							<div id="dnesneMeniny">			
+							</div>
+						</li>
+						<li>
+							<form submit="return false" class="navbar-form navbar-right" role="searchName" id="meno-form">
+								<div class="form-group">
+									<input class="nsSmall form-control" type="text" id="meno" placeholder="Meno"/>
+								</div>
+								<button onclick="zobrazDatum()" type="button" class="btn btn-default">Nájdi dátum</button>
+							</form>
+						</li>
+						<li>
+							<form submit="return false;" class="navbar-form navbar-right" role="searchDate">
+								<div class="form-group">
+									<input class="nsSmall form-control" type="text" id="datum" placeholder="Dátum"/>
+								</div>
+								<button onclick="zobrazMeno()" type="button" class="btn btn-default">Nájdi meno</button>
+							</form>
+						</li>		
 					</ul>
 				</div><!-- /.navbar-collapse -->
 			</div><!-- /.container-fluid -->
 		</nav>
+		
+		<!--<div id="datumPreMeno">
+		</div>
+
+		<div id="menoPreDatum">
+		</div>-->
 
 		<section id="pamiatky">
 			<h2>Pamiatky</h2>
