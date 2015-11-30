@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="author" content="Jan Kovac">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="css/calendar.min.css">
+		
+
+		
+		<title>Meniny</title>
+	</head>
+	
+	<body>
+		
+		<div class="formular" >    
+			<h1>Meniny</h1>
+				
+				
+				
+				
+				<p>
+					
+					<div id="dnesnyDatum">
+						 Dnes je:
+					</div>
+					<br>
+					
+					<div id="dnesneMeniny">
+						
+					</div>
+				</p>
+				
+				<hr/>
+				
+				<p>
+					<label for="meno">Zadajte meno:</label>
+					<input class="input" type="text" id="meno"/>
+					<input type="button" value="Zobraz dátum" onclick="zobrazDatum()"/><br/>
+				</p>
+				<div id="datumPreMeno">
+				</div>
+			
+				<hr/>
+			
+				<p>
+					<label for="datum">Zadajte dátum:</label>
+					<input class="input" type="text" id="datum"/> <!-- DOM1 -->
+					<!--button id="dateButton">Zobraz meno</button--> <!-- TOTO JE NA TEN DEBILNY DOM2. input type potom treba zakomentovat -->
+					<input type="button" value="Zobraz meno" onclick="zobrazMeno()"/>
+					<br/>
+
+				</p>
+				<div id="menoPreDatum">
+				</div>
+			
+			
+		</div>		
+	</body>
+			<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+		<!--script type="text/javascript" src="js/bootstrap.min.js"></script-->
+		<script type="text/javascript" src="js/calendar.min.js" ></script>
+		<script type="text/javascript" src="js/scriptMeniny.js" ></script>
+</html>

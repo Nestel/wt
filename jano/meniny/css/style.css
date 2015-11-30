@@ -1,0 +1,33 @@
+body{
+	background-color: #000000;
+	opacity: 0.9;
+	z-index:1;
+}
+
+.formular {
+	background-color: #FFCC33;
+	float: center;
+	width:700px;
+	height:700px;
+	margin:auto;
+	padding:100px;
+	border-radius:50px;
+	font-size: 13pt;
+	z-index:3;
+}
+
+.input{
+width: 50%; 
+padding: 5px;
+}
+
+label{
+width: 40%;
+float:left;
+text-align: left;
+}
+h1{
+font-size: 20pt;
+text-align: center;
+}
+
