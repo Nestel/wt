@@ -1,0 +1,31 @@
+#all {
+    display: inline-flex;
+
+    }
+li{
+    margin: 0 3px 3px 3px; 
+    padding: 0.4em; 
+    padding-left: 1.5em; 
+    font-size: 1.4em; 
+    height: 18px; 
+    width: 15px;
+    display: inline-flex; 
+    }
+
+#sortable { list-style-type: none; margin: 0 auto; padding: 0; width: 90%;  text-align: center;}
+#sortable li { margin: 0 3px 3px 3px; padding: 0.4em; padding-left: 1.5em; font-size: 1.4em; height: 18px; width: 15px;
+    display: inline-flex; }
+#sortable li span { position: absolute; margin-left: -1.3em; }
+#btn {
+    margin:0 auto;
+    width:640px;
+    height: 40px;
+    text-align: center;
+}
+h1{
+    text-align: center;
+}
+#napoveda, #showScore, #chyba{
+    text-align: center;
+    margin: 0 auto;
+}

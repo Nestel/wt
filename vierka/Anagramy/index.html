@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Anagramy</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script type="text/JavaScript" src="DnD.js"></script>
+        <script src="http://code.jquery.com/jquery-1.8.2.js"></script>
+        <script src="http://code.jquery.com/ui/1.9.1/jquery-ui.js"></script>
+        <script type="text/JavaScript" src="plotly-latest.min.js"></script>
+        <script type="text/JavaScript" src="script.js"></script>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    </head>
+<body onload = "init()">
+
+<h1>Anagramy</h1>
+<br>
+
+<!--     <p id="napoveda1">Nápoveda:</p> -->
+    <p id="showScore"></p>
+    <p id="napoveda"></p>
+    <br>
+<ul id="sortable"></ul>
+<br>
+<div id="btn">
+    <button type="button" onClick = "checkAnagram()">Skontroluj</button>
+    <button type="button" onClick = "printNapoveda()">Nápoveda</button>
+    <button id="btnNext" type="button" onClick = "printAnagram(countAnagrams)">Ďalší anagram</button>
+    <br>
+  <!--   <p id="demo"></p> -->
+
+    <p id="chyba"></p>
+    <br>
+    <p id="koniecAnagramov">Prešiel si všetky anagramy, môžes si pozrieť graf.</p>
+    <button id="btnGraf" type="button" onClick = "printGraph()">Ukáž graf</button>
+    <br>
+    <p>Vitaj v hre Anagramy. Tvojou úlohou je vyriešiť tieto slovné prešmyčky, teda slová (vety), ktoré vzniknú zmenou poradia písmen v inom slove (vete). Prichystané sú slovenské aj anglické anagramy.</p>
+    <h2>Ako hrať</h2>
+    <p>Keď poprehadzuješ poradie písmen, ktoré bolo zadané a myslíš si, že si našiel správnu odpoveď, klikni na tlačidlo Skontroluj, ktoré ti oznámi, či bola odpoveď správna, alebo nie. Ak nevieš, klikni na tlačidlo Nápoveda, ktoré ti ukáže malú nápovedu ku každému anagramu. Po kliknutí na Skontroluj sa ti objaví tlačidlo Ďalší anagram, ktorým sa dostaneš do nového kola. Po skončení hry si môžeš pozrieť graf, ktorý znázorňuje tvoje skóre, kliknutím na tlačidlo Ukáž graf.</p>
+    <h2>Bodovanie</h2>
+    <p>Ak odpovieš správne bez nápovedy, získavaš 3 body. Ak odpovieš nesprávne, 3 body sa ti odpočítajú. Po otvorení nápovedy sa ti odpočíta 1 bod.</p>
+    <div id='myDiv'></div>
+</div>
+</body>
+</html>
