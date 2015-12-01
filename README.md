@@ -9,8 +9,13 @@
 
 	Nestel - Bratislava 3-Nové Mesto Sklad muničný
 	Nestel - Bratislava 2-Ružinov Továreň
+	
+	Jano - Bratislava Stary most
+	Jano - Skalnate pleso hvezdaren
+	
+	Matúš - Košice Stará sladovňa
+	Matúš - Betliar Kaštieľ s areálom
 
-	Vyberte si pamiatky a napiste mi ich sem pls, potrebujem to dat do mapy. Dakujem
 
 #Inicializacia repo
 
