@@ -1,0 +1,227 @@
+#individualneZadanie1{
+    width: 800px;
+    height: 800px;
+    position: absolute;
+}
+
+#divMapa{
+    border-style: solid;
+    border-width: 1px;
+
+    width: 800px;
+    height: 300px;
+    background-color: grey;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+  }
+
+  #imgSVK{
+    top: 0px;
+    left: 0px;
+    
+    width: 600px;
+    height: 300px;
+    z-index: 0;
+  }
+
+#divPuzzle{
+    border-style: solid;
+    border-width: 1px;
+
+    width: 800px;
+    height: 340px;
+    background-color: grey;
+    position: absolute;
+    top: 310px;
+    left: 0px;
+  }
+
+#divScore{
+    border-style: solid;
+    border-width: 1px;
+
+    width: 800px;
+    height: 270px;
+    background-color: lightyellow;
+    position: absolute;
+    top: 660px;
+    left: 0px;
+
+    font-family: sans-serif;
+    font-size: 16px;
+     padding-left: 20px;
+     padding-top: 20px;
+
+}
+
+.inDivScore{
+  margin-top: 10px;
+  font-size: 12px;
+}
+
+#youWon{
+    width: 360px;
+    height: 40px;
+    margin-top: 10px;
+    display: none;
+    padding-top: 10px;
+}
+
+#myDiv{
+    position: absolute;
+    top: 10px;
+    left: 390px;
+
+    width: 400px;
+    height: 250px;
+    background-color: white;
+
+    border-style: solid;
+    border-width: 1px;
+}
+
+  .drop{
+      position: absolute;
+      /*border-style: solid;
+      border-width: 1px;*/
+  }
+
+  .drag{
+      position: absolute;
+    /*  border-style: solid;
+      border-width: 1px;*/
+  }
+
+/**************************************/
+
+  #imgBA{
+    top: 206px;
+    left: 245px;
+    
+    width: 72px;
+    height: 96px;
+    z-index: 1;
+  }
+
+  #imgTT{
+    top: 24px;
+    left: 627px;
+    
+    width: 120px;
+    height: 180px;
+    z-index: 1;
+  }
+  #imgNR{
+    top: 14px;
+    left: 257px;
+    
+    width: 150px;
+    height: 150px;
+    z-index: 1;
+  }
+  #imgTN{
+    top: 179px;
+    left: 340px;
+    
+    width: 156px;
+    height: 132px;
+    z-index: 1;
+  }
+  #imgBB{
+    top: 175px;
+    left: 17px;
+    
+    width: 210px;
+    height: 138px;
+    z-index: 1;
+  }
+  #imgZA{
+    top: 22px;
+    left: 427px;
+    
+    width: 168px;
+    height: 138px;
+    z-index: 1;
+  }
+  #imgPO{
+    top: 213px;
+    left: 519px;
+    
+    width: 270px;
+    height: 108px;
+    z-index: 1;
+  }
+
+  #imgKE{
+    top: 34px;
+    left: 13px;
+    
+    width: 222px;
+    height: 102px;
+    z-index: 1;
+  }
+  
+
+/**************************************/
+
+
+
+  #divBA{
+    top: 151px;
+    left: 22px;
+    
+    width: 72px;
+    height: 96px;
+  }
+
+  #divTT{
+    top: 111px;
+    left: 23px;
+    
+    width: 120px;
+    height: 180px;
+  }
+  #divNR{
+    top: 139px;
+    left: 98px;
+    
+    width: 150px;
+    height: 150px;
+  }
+  #divTN{
+    top: 49px;
+    left: 66px;
+    
+    width: 156px;
+    height: 132px;
+  }
+  #divBB{
+    top: 104px;
+    left: 172px;
+    
+    width: 210px;
+    height: 138px;
+  }
+  #divZA{
+    top: 8px;
+    left: 168px;
+    
+    width: 168px;
+    height: 138px;
+  }
+  #divPO{
+    top: 32px;
+    left: 310px;
+    
+    width: 270px;
+    height: 108px;
+  }
+
+  #divKE{
+    top: 97px;
+    left: 341px;
+    
+    width: 222px;
+    height: 102px;
+  }
