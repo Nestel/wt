@@ -1,4 +1,5 @@
 function bindEventToNavigation(){
+    showBreadCrumb();
     $.each($("#navigation_links > li"), function(index, element){
         $(element).click(function(event){
             breadcrumbStateSaver($(event.currentTarget).html());
@@ -24,8 +25,10 @@ function breadcrumbStateSaver(text){
 
 function showBreadCrumb(){
     var breads = [];
-    var bc = sessionStorage.breadcrumb.toString();
-    breads = bc.split(" >> ");
+    if(sessionStorage.breadcrumb) {
+        var bc = sessionStorage.breadcrumb.toString();
+        breads = bc.split(" >> ");
+    }
     if (breads.length > 5) {
         var breadcrumb = "" + breads[breads.length-5];
         for (i = breads.length-5+1; i<breads.length; i++) {
