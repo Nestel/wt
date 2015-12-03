@@ -19,15 +19,15 @@
 #buttonStart{
 	position: absolute;
 	left: 90px;
-	top:500px;
+	top:515px;
 	width: 150px;
 	height: 70px;
 }
 
 #buttonOk{
 	position: absolute;
-	left: 75px;
-	top:500px;
+	left: 90px;
+	top:515px;
 	width: 150px;
 	height: 70px;
 	visibility: hidden;
@@ -51,8 +51,8 @@ input{
 #buttonRestart{
 	display: none;
 	position: absolute;
-	left: 75px;
-	top:500px;
+	left: 90px;
+	top:515px;
 	width: 150px;
 	height: 70px;
 }

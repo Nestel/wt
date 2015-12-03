@@ -8,16 +8,16 @@
 
 #buttonStart{
 	position: absolute;
-	left: 75px;
-	top:550px;
+	left: 90px;
+	top:565px;
 	width: 150px;
 	height: 70px;
 }
 
 #buttonOk{
 	position: absolute;
-	left: 75px;
-	top:550px;
+	left: 90px;
+	top:565px;
 	width: 150px;
 	height: 70px;
 	visibility: hidden;
@@ -62,8 +62,8 @@ input{
 #buttonRestart{
 	display: none;
 	position: absolute;
-	left: 75px;
-	top:550px;
+	left: 90px;
+	top:565px;
 	width: 150px;
 	height: 70px;
 }
