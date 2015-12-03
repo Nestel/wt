@@ -86,8 +86,8 @@ function loadJSON(callback) {
     div.style.height="25px";
     div.style.position="absolute";
     div.style.zIndex="200";
-    div.style.left = poziciaLongitude+ "px"; 
-    div.style.bottom = poziciaLatitude+ "px";
+    div.style.marginLeft = poziciaLongitude+ "px"; 
+    div.style.marginTop = -(poziciaLatitude + 25)+ "px";
     div.style.display="block";
 
     var divInfo = document.createElement("div");
