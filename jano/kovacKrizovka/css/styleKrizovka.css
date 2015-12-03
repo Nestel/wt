@@ -1,0 +1,51 @@
+
+h1{
+font-size: 20pt;
+text-align: center;
+}
+
+.center {
+    margin: auto;
+    width: 60%;
+    /*border:3px solid #73AD21;*/
+    padding: 10px;
+}
+
+table, th, td {
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 15px;
+}
+
+.tajnicka {
+	border: 1px solid black;
+	background-color: #5D8CC2;
+}
+
+.krizovka {
+	border: 1px solid black;
+	background-color: none;
+}
+
+.prazdnaBunka {
+	border: none;
+	background-color: none;
+}
+
+.spravne {
+	background-color: green;
+}
+
+.nespravne {
+	background-color:red;
+}
+
+.ziadne {
+	background-color:none;
+}
+
+#myDiv {
+	width: 50%;
+}
