@@ -1,6 +1,6 @@
 #map {
       width: 1100px;
-      height: 600px;
+      height: 625px;
       /*margin: 0 auto;
       margin-top: 5%;*/
       position: absolute;
@@ -18,7 +18,7 @@
 
 #buttonStart{
 	position: absolute;
-	left: 75px;
+	left: 90px;
 	top:500px;
 	width: 150px;
 	height: 70px;
@@ -63,19 +63,20 @@ input{
 	height: 600px;
 	position: absolute;
 	right:5px;
+	padding: 1%;
 	border-radius: 10px;
 }
 
 #envelope{
 	position: absolute;
-	width:1450px;
-	height:600px;
+	width:1475px;
+	height:625px;
 }
 
 #envelopeRelative{
 	margin:0 auto;
-	width:1455px;
-	height:605px;
+	width:1480px;
+	height:630px;
 }
 
 #plotPlace{
