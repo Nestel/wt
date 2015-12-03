@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="sk">
 	<head>
 		<meta charset="UTF-8">
 		<meta name="author" content="Gabriel Kerekeš">
 
-		<title>Záverečná práca | EliteGroup</title>
+		<title>Sudoku | EliteGroup</title>
 
 		<!-- bootstrap css -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" crossorigin="anonymous">
@@ -17,10 +18,11 @@
 		<script src="js/jquery.js"></script>
 		<!-- bootstrap javascript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" crossorigin="anonymous"></script>
+		<script src="js/plotly.js"></script>
+		<!-- sudoku javascript -->
+		<script src="js/sudoku.js"></script>
 		<!-- menu javascript -->
-		<script src="js/menu.js"></script>
-		<!-- meniny javascript-->
-		<script src="js/meniny.js" ></script>
+		<script src="js/menu.js"></script> 
 
 		<script src="js/counter.js"></script>
 		<script>
@@ -76,59 +78,45 @@
 			</div><!-- /.container-fluid -->
 		</nav>
 
-		<section id="pamiatky">
-			<h2>Pamiatky</h2>
+		<section id="sudoku">
+			<h2>Sudoku</h2>
 
 			<hr>
 
 			<div class="row">
-				<div class="col-sm-6">
-					<div class="pamiatka">
-						<h3>Starý most Františka Jozefa I.</h3>
-						<hr>
-						<img src="img/stary_most.jpg">
-						<p>
-							Starý most Františka Jozefa I. bol prvým železným mostom, ktorý spojil Petržalku s Bratislavou.
-							O jeho výstavbe rozhodli poslanci 9. apríla 1877. Následne ju schválila uhorská vláda a Bratislava. 
-							Výstavba začala 12. augusta 1889 a most bol 30. decembra 1890 za prítomnosti cisára Františka Jozefa I. slávnostne odovzdaný do užívania.
-							Most mal dlžku 458,4 metrov, bol tvorený  7 poliami, z ktorých stredné pole bolo najväcšie, dlhé 92 metrov.
-							Piliere mali kesónové základy, ktoré siahali do hĺbky 14 m pod normálnou hladinou vody, 
-							boli murované z lomového kameňa a obložené žulovými kvádrami. Horná nosná konštrukcia vo 
-							všetkých poliach bola železná, stredná časť mosta bola zavesená na mohutný železný oblúk. 
-							Šírka mosta bola 6,5 m pre vozovú premávku a 3 m pre chodcov. Na bratislavskej a petržalskej strane boli postavené murované colnice 
-							na vyberanie mýta, na petržalskej strane aj skrinka prvej pomoci. 
-							Výstavba mosta stála 1 milión 780 tisíc zlatých.
-						</p>
-					</div>
+				<div class="col-sm-3">
+					<h3>Notes</h3>
+					<hr>
+					<p id="sudoku-notes">Žiadne poznámky</p>
+					<form id="sudoku-notes-form">
+						<input type='text' id="sudoku-notes-input">
+					</form>
 				</div>
-
 				<div class="col-sm-6">
-					<div class="pamiatka">
-						<h3>Skalnate pleso hvezdaren</h3>
-						<hr>
-						<img src="img/skalnate_pleso.jpg">
-						<p>
-							Astronomické observatórium Skalnaté Pleso sa nachádza neďaleko Skalnatého plesa v nadmorskej výške 1 786 nad hladinou mora. 
-							Observatórium bolo založené v roku 1943 keď boli vykonané jeho prvé pozorovania. 
-							Pôvodne bolo observatórium vybavené dvoma ďalekohľadmi: 0,6m (f=3,29) reflektorom firmy Zeiss 
-							a dvoma menšími ~0.2m reflektormi. Jeho prvím riaditeľom sa stal český astronóm Antonín Bečvář,
-							ktorý má hlavnú zásluhu na jeho vybudovaní. V budove observatória sa nachádza aj meteorologická stanica 
-							patriaca Geofyzikálnemu ústavu SAV.
-						</p>
-					</div>
+					<form id="sudoku-form">
+						<p id="sudoku-score">SCORE: 0</p>
+					</form>
+				</div>
+				<div class="col-sm-3">
+					<h3>Návod</h3>
+					<hr>
+					<p>bla bla bla bla bla bla bla bla bla bla </p>
+				</div>
+			</div>
+		</section>
+
+		<section id="graf">
+			<div class="row">
+				<h2>Graf vašich skóre</h2>
+				<hr class="no-margin">
+				<div id="myDiv">
+
 				</div>
 			</div>
 		</section>
 
 		<footer>
-			<p id="visitCounter">Počet návštev: </p>
+			Copyright &copy; 2015 Gabriel Kerekeš .PLP
 		</footer>
-		
-		<!-- on load script -->
-		<script>
-			$(function(){
-    			displayCounter();
-			});
-		</script>
 	</body>
 </html>

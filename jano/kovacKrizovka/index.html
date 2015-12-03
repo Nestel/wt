@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="author" content="Jan Kovac">
+		<link rel="stylesheet" type="text/css" href="css/styleKrizovka.css">		
+		
+		<title>Krizovka</title>
+	</head>
+	
+	<body>
+		<h1>Krížovka</h1>
+			
+		<p>
+			<div id="krizovka" class="center"></div>
+			<br>
+			pozn. Pozor, riešenie je závislé od diakritiky!!!
+			<br>
+			<button id="generateButton" onclick="generujKrizovku()">Generuj novú krížovku</button> 
+		</p>
+		
+		<hr/>
+		
+		<p>
+			Nápoveda:<br/>
+			<div id="napoveda"></div>
+		</p>
+		
+		<hr/>
+	
+		<p>
+			<div id="body"></div>
+			<br>
+			<button id="dateButton" onclick="kontrolujRiesenie()">Kontroluj riešenie</button> 
+			<div id="x">
+			</div>
+		</p>
+		
+		<p>
+			<div id="myDiv"></div>
+		</p>
+	</body>
+
+		<script type="text/JavaScript" src="js/plotly-latest.min.js"></script>
+		<script type="text/javascript" src="js/scriptKrizovka.js" ></script>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="sk">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="author" content="Gabriel Kerekeš">
+
+		<title>Záverečná práca | EliteGroup</title>
+
+		<!-- bootstrap css -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" crossorigin="anonymous"> -->
+
+		<!-- main css file -->
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+
+		<!-- jquery -->
+		<script src="js/jquery.js"></script>
+		<!-- bootstrap javascript -->
+		<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" crossorigin="anonymous"></script>-->
+		<script src="js/bootstrap.min.js"></script>
+		<!-- menu javascript -->
+		<script src="js/menu.js"></script>
+		<!-- meniny javascript-->
+		<script src="js/meniny.js" ></script>
+
+		<script src="js/counter.js"></script>
+		<script>
+			insertCounter();
+		</script>
+
+		<script type="text/JavaScript" src="js/plotly-latest.min.js"></script>
+		<script type="text/javascript" src="js/krizovka.js" ></script>
+	</head>
+	
+	<body>
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+    		<!-- Brand and toggle get grouped for better mobile display -->
+    			<div class="navbar-header">
+      				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        				<span class="sr-only">Toggle navigation</span>
+        				<span class="icon-bar"></span>
+        				<span class="icon-bar"></span>
+        				<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="/zp/">Záverečná práca</a>
+    			</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul id="navbar" class="nav navbar-nav">
+						
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li>			
+							<div id="dnesnyDatum">
+							</div>
+						</li>
+						<li>
+							<div id="dnesneMeniny">			
+							</div>
+						</li>
+						<li>
+							<form submit="return false" class="navbar-form navbar-right" role="searchName" id="meno-form">
+								<div class="form-group">
+									<input class="nsSmall form-control" type="text" id="meno" placeholder="Meno"/>
+								</div>
+								<button onclick="zobrazDatum()" type="button" class="btn btn-primary">Nájdi dátum</button>
+							</form>
+						</li>
+						<li>
+							<form submit="return false;" class="navbar-form navbar-right" role="searchDate">
+								<div class="form-group">
+									<input class="nsSmall form-control" type="text" id="datum" placeholder="Dátum"/>
+								</div>
+								<button onclick="zobrazMeno()" type="button" class="btn btn-primary">Nájdi meno</button>
+							</form>
+						</li>		
+					</ul>
+				</div><!-- /.navbar-collapse -->
+			</div><!-- /.container-fluid -->
+		</nav>
+		
+		<h1>Krížovka</h1>
+		<hr>
+			
+		<section>
+			<div class="row">
+				<div class="col-sm-8">
+					<div id="krizovka" class="center"></div>
+				</div>
+				
+				<div class="col-sm-4">
+					pozn. Pozor, riešenie je závislé od diakritiky!!!
+					<p>
+						Nápoveda:<br/>
+						<div id="napoveda"></div>
+					</p>
+					
+					<hr/>
+				
+					<p>
+						<div id="body"></div>
+						<br>
+						<div class="row">
+							<div class="col-sm-6">
+								<button id="dateButton" class="btn btn-success form-control" onclick="kontrolujRiesenie()">Kontroluj riešenie</button> 
+							</div>
+							<div class="col-sm-6">
+								<button id="generateButton" class="btn btn-danger form-control" onclick="generujKrizovku()">Generuj novú krížovku</button>
+							</div>
+						</div>
+						<div id="x">
+						</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div id="myDiv"></div>
+			</div>
+		</section>
+	</body>
+</html>

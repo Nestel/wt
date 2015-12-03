@@ -1,0 +1,551 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- Autor suboru: Katarina Zakova -->
+<!-- Posledna aktualizacia: marec 2015 -->
+<krizovky>
+	<krizovka>
+		<tajnicka>prázdniny</tajnicka>
+		<slovo>
+			<napoveda>Robí sa po každom diktáte, písomne si v nej opravíte chyby.</napoveda>
+			<riesenie>oprava</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>V slovenčine platí zákon o rytmickom...</napoveda>
+			<riesenie>krátení</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>Známa kniha, ktorú napísal Lewis Carrol - Alica v krajine...</napoveda>
+			<riesenie>zázrakov</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>Rozprávanie sa člení na tieto časti: úvod, jadro a ...</napoveda>
+			<riesenie>záver</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>Kone ju majú na kopyte...</napoveda>
+			<riesenie>podkovu</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>Školská pomôcka, ukladajú sa do nej písacie potreby.</napoveda>
+			<riesenie>peračník</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>Každý žiak si ju nosí do školy, aby nebol hladný.</napoveda>
+			<riesenie>desiata</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>Nachádzajú sa v nich dôležité informácie, novinky.</napoveda>
+			<riesenie>noviny</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>V centre Košíc sa nachádza kostol s menom Dóm sv. ...</napoveda>
+			<riesenie>Alžbety</riesenie>
+		</slovo>
+	</krizovka>
+	<krizovka>
+		<tajnicka>štart</tajnicka>
+		<slovo>
+			<napoveda>vstupné zariadenie, ktorým sa ovláda pohyb kurzoru na monitore</napoveda>
+			<riesenie>myš</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>prenosný počítač s nabíjateľnou batériou väčší ako tablet sa nazýva...</napoveda>
+			<riesenie>notebook</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>Výstupné zariadenie slúžiace na tlač sa nazýva...</napoveda>
+			<riesenie>tlačiareň</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>Prehliadač vyvíjaný spoločnosťou Microsoft sa nazýva "Internet..."</napoveda>
+			<riesenie>explorer</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>Komponent, ktorý vykresluje grafický výstup na monitor sa nazýva "grafická..."</napoveda>
+			<riesenie>karta</riesenie>
+		</slovo>  
+	</krizovka>
+	<krizovka>
+		<tajnicka>enter</tajnicka>
+		<slovo>
+			<napoveda>klávesa  na zmazanie posledného napísaného znaku</napoveda>
+			<riesenie>backspace</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>program, ktorého cieľom je identifikovať a eliminovať počítačové vírusy</napoveda>
+			<riesenie>antivírus</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>proces, pri ktorom sa znižuje alebo odstraňuje fragmentácia súborového systému z počítačových diskových jednotiek</napoveda>
+			<riesenie>defragmentácia</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>chyba</napoveda>
+			<riesenie>error</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>uvedenie PC do počiatočného stavu</napoveda>
+			<riesenie>reset</riesenie>
+		</slovo>
+	</krizovka>
+	<krizovka>
+		<tajnicka>databáza</tajnicka>
+		<slovo>
+			<napoveda>klávesa na zmazanie znaku vpravo za kurzorom</napoveda>
+			<riesenie>delete</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>program, ktorého cieľom je identifikovať a eliminovať počítačové vírusy</napoveda>
+			<riesenie>antivírus</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>Klávesa, ktorá slúži na potvrdenie operácie</napoveda>
+			<riesenie>enter</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>Keď nahnevá softvér kopnem do... </napoveda>
+			<riesenie>hardvéru</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>klávesa na zmazanie posledného napísaného znaku zľava od kurzoru</napoveda>
+			<riesenie>backspace</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>Vstupné zariadenie, slúžiace na zadávanie textu po znakoch je...</napoveda>
+			<riesenie>klávesnica</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>aká karta počítača sa stará o zvukový výstup z počítača</napoveda>
+			<riesenie>zvuková</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>pamäť s priamym prístupom počítača je...</napoveda>
+			<riesenie>ram</riesenie>
+		</slovo>
+	</krizovka>
+	<krizovka>
+		<tajnicka>opera</tajnicka>
+		<slovo>
+			<napoveda>prenosný počítač s nabíjateľnou batériou väčší ako tablet sa nazýva...</napoveda>
+			<riesenie>notebook</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>Prehliadač vyvíjaný spoločnosťou Microsoft sa nazýva "Internet..."</napoveda>
+			<riesenie>explorer</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>NOD 32 vyvíja spoločnosť</napoveda>
+			<riesenie>eset</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>Výstupné zariadenie slúžiace na tlač sa nazýva...</napoveda>
+			<riesenie>tlačiareň</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>Komponent, ktorý vykresluje grafický výstup na monitor sa nazýva "grafická..."</napoveda>
+			<riesenie>karta</riesenie>
+		</slovo>
+	</krizovka>
+	<krizovka>
+		<tajnicka>ram</tajnicka>
+		<slovo>
+			<napoveda>Komponent, ktorý vykresluje grafický výstup na monitor sa nazýva "grafická..."</napoveda>
+			<riesenie>karta</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>Výstupné zariadenie slúžiace na tlač sa nazýva...</napoveda>
+			<riesenie>tlačiareň</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>vstupné zariadenie, ktorým sa ovláda pohyb kurzoru na monitore</napoveda>
+			<riesenie>myš</riesenie>
+		</slovo>
+	</krizovka>
+	<krizovka>	
+		<tajnicka>linux</tajnicka>
+		<slovo>
+			<napoveda>Vetorový grafický editor "Zoner..."</napoveda>
+			<riesenie>callisto</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>Výstupné zariadenie slúžiace na tlač sa nazýva...</napoveda>
+			<riesenie>tlačiareň</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>prenosný počítač s nabíjateľnou batériou väčší ako tablet sa nazýva...</napoveda>
+			<riesenie>notebook</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>Nežiádúci, škodlivý softvér</napoveda>
+			<riesenie>vírus</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>Tabulkový procesor z balíku Office</napoveda>
+			<riesenie>excel</riesenie>
+		</slovo>
+	</krizovka>
+	<krizovka>
+		<tajnicka>microsoft</tajnicka>
+		<slovo>
+			<napoveda>vstupné zariadenie, ktorým sa ovláda pohyb kurzoru na monitore</napoveda>
+			<riesenie>myš</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>Vetorový grafický editor "Zoner..."</napoveda>
+			<riesenie>callisto</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>Vstupné zariadenie, slúžiace na zadávanie textu po znakoch je...</napoveda>
+			<riesenie>klávesnica</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>Výstupné zariadenie slúžiace na tlač sa nazýva...</napoveda>
+			<riesenie>tlačiareň</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>prenosný počítač s nabíjateľnou batériou väčší ako tablet sa nazýva...</napoveda>
+			<riesenie>notebook</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>Nežiádúci, škodlivý softvér</napoveda>
+			<riesenie>vírus</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>Pokročilý textový editor z balíku Office</napoveda>
+			<riesenie>word</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>Proces vymazávania dát z diskovej jednotky</napoveda>
+			<riesenie>formátovanie</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>Prezentační program z balíku Office (spolu a malým)</napoveda>
+			<riesenie>powerpoint</riesenie>
+		</slovo>
+	</krizovka>
+	<krizovka>
+		<tajnicka>antivírus</tajnicka>
+		<slovo>
+			<napoveda>Výstupné zariadenie slúžiace na tlač sa nazýva...</napoveda>
+			<riesenie>tlačiareň</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>Vstupné zariadenie, slúžiace na zadávanie textu po znakoch je...</napoveda>
+			<riesenie>klávesnica</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>prenosný počítač s nabíjateľnou batériou väčší ako tablet sa nazýva...</napoveda>
+			<riesenie>notebook</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>Prezentační program z balíku Office (spolu a malým)</napoveda>
+			<riesenie>powerpoint</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>Proces vymazávania dát z diskovej jednotky</napoveda>
+			<riesenie>formátovanie</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>Nežiádúci, škodlivý softvér</napoveda>
+			<riesenie>vírus</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>Pokročilý textový editor z balíku Office</napoveda>
+			<riesenie>word</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>Rodina slobodných operačných systémov ako napr. Ubuntu</napoveda>
+			<riesenie>linux</riesenie>
+		</slovo>	
+		<slovo>
+			<napoveda>NOD 32 vyvíja spoločnosť</napoveda>
+			<riesenie>eset</riesenie>
+		</slovo>
+	</krizovka>
+	<krizovka>
+		<tajnicka>word</tajnicka>
+		<slovo>
+			<napoveda>Prezentační program z balíku Office (spolu a malým)</napoveda>
+			<riesenie>powerpoint</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>Proces vymazávania dát z diskovej jednotky</napoveda>
+			<riesenie>formátovanie</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>Výstupné zariadenie slúžiace na tlač sa nazýva...</napoveda>
+			<riesenie>tlačiareň</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>klávesa na zmazanie znaku vpravo za kurzorom</napoveda>
+			<riesenie>delete</riesenie>
+		</slovo>
+	</krizovka>
+	<krizovka> 
+		<tajnicka>javascript</tajnicka>
+		<slovo>
+			<napoveda>rozisreny objektovo-orientovany programoací jazyk</napoveda>
+			<riesenie>java</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>Výrobca počítačov Macintosh a prehrávača iPod.</napoveda>
+			<riesenie>apple</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>Program, ktorého cieľom je identifikovať a eliminovať počítačové vírusy</napoveda>
+			<riesenie>antivírus</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>Pamäť s priamym prístupom</napoveda>
+			<riesenie>ram</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>uvedenie PC do počiatočného stavu</napoveda>
+			<riesenie>reset</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>Tabuľkový editor od Microsoftu</napoveda>
+			<riesenie>excel</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>Klávesa na potvrdenie vstupu údajov do PC</napoveda>
+			<riesenie>enter</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>Grafické výstupné zariadenie</napoveda>
+			<riesenie>monitor</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>Riadiaca jednotka PC</napoveda>
+			<riesenie>procesor</riesenie>
+		</slovo>  
+		<slovo>
+			<napoveda>vyrobca CPU i-core</napoveda>
+			<riesenie>intel</riesenie>
+		</slovo>      
+	</krizovka>
+	<krizovka>
+		<tajnicka>feistu</tajnicka>
+		<slovo>
+			<napoveda>usb na nazyva ..... disk</napoveda>
+			<riesenie>flash</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>multimedialne vstupno-vystupne zariadenie</napoveda>
+			<riesenie>scener</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>prepojenie viacerých počítačov vytvára</napoveda>
+			<riesenie>sieť</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>vztahy tried v programe urcuje ...... diagram</napoveda>
+			<riesenie>class</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>najväčšia počítačová sieť</napoveda>
+			<riesenie>internet</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>open source operačný systém</napoveda>
+			<riesenie>linux</riesenie>
+		</slovo>
+	</krizovka>
+	<krizovka>
+		<tajnicka>aplikácia</tajnicka>
+		<slovo>
+			<napoveda>kolekcia dát alebo informácií uložených v počítačovom systéme</napoveda>
+			<riesenie>databáza</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>predchodca internetu</napoveda>
+			<riesenie>arpanet</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>prípona súboru webovej stránky</napoveda>
+			<riesenie>html</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>poskytovateľ pripojenia</napoveda>
+			<riesenie>provider</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>charakteristika procesoru, ktorá určuje rýchlosť a výkon</napoveda>
+			<riesenie>frekvencia</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>grafický editor windowsu</napoveda>
+			<riesenie>skicár</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>rýchla vyrovnávacia pamäť</napoveda>
+			<riesenie>cache</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>webový prehliadač ...... fierfox</napoveda>
+			<riesenie>mozzila</riesenie>
+		</slovo>  
+		<slovo>
+			<napoveda>operačná pamať</napoveda>
+			<riesenie>ram</riesenie>
+		</slovo>  
+	</krizovka>
+	<krizovka>
+		<tajnicka>skúška</tajnicka>
+		<slovo>
+			<napoveda>počítač s riadiacími dátami siete</napoveda>
+			<riesenie>server</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>prezývka na internete</napoveda>
+			<riesenie>nick</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>Jednosmerný komunikačný kanál procesov (ang pipe)</napoveda>
+			<riesenie>rúra</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>objekt = ______ triedy</napoveda>
+			<riesenie>inštancia</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda> veda o informácii a jej automatickom spracovaní</napoveda>
+			<riesenie>informatika</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>zásobník anglicky</napoveda>
+			<riesenie>stack</riesenie>
+		</slovo>
+	</krizovka>
+	<krizovka>
+		<tajnicka>internet</tajnicka>
+		<slovo>
+			<napoveda>ucelená časť kódu v objektovo orientovanom jazyku</napoveda>
+			<riesenie>trieda</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>datový typ celých čísel</napoveda>
+			<riesenie>integer</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>počítač alebo zariadenie pripojené do siete</napoveda>
+			<riesenie>host</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>premenná typu trieda</napoveda>
+			<riesenie>objekt</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda> dátový typ reťazca znakov</napoveda>
+			<riesenie>string</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>rozdelenie pamäte na rámce sa nazýva</napoveda>
+			<riesenie>stránkovanie</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>skratka najpomalšieho webového prehliadača</napoveda>
+			<riesenie>ie</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>tag na označenie päty stránky v html</napoveda>
+			<riesenie>footer</riesenie>
+		</slovo>
+	</krizovka>
+	<krizovka>
+		<tajnicka>procesor</tajnicka>
+		<slovo>
+			<napoveda>spustiteľný program</napoveda>
+			<riesenie>aplikácia</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>sústava vodičov, ktoré prepájajú viaceré elektrické či elektronické zariadenia</napoveda>
+			<riesenie>zbernica</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>práve vykonávaný program</napoveda>
+			<riesenie>proces</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>rozdelenie pamäte na menšie časti</napoveda>
+			<riesenie>segmentácia</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>jadro OS</napoveda>
+			<riesenie>kernel</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>dátový typ reťazca znakov</napoveda>
+			<riesenie>string</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>postupné vykonávanie krokov</napoveda>
+			<riesenie>algoritmus</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>rámec anglicky</napoveda>
+			<riesenie>frame</riesenie>
+		</slovo>
+	</krizovka>
+	<krizovka>
+		<tajnicka>segment</tajnicka>
+		<slovo>
+			<napoveda>solid state drive skratka</napoveda>
+			<riesenie>ssd</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>ochranu kritickej oblasti pri viac vláknových oblastiach zabezbepčuje...</napoveda>
+			<riesenie>mutex</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>postupné vykonávanie krokov</napoveda>
+			<riesenie>algoritmus</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>1000 nasobok bajtu</napoveda>
+			<riesenie>megabajt</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>rozhranie anglicky</napoveda>
+			<riesenie>interface</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>hlavná funkcia kódu</napoveda>
+			<riesenie>main</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>dátový typ pre desatinné čísla</napoveda>
+			<riesenie>float</riesenie>
+		</slovo>
+	</krizovka>
+	<krizovka>
+		<tajnicka>program</tajnicka>
+		<slovo>
+			<napoveda>cyklus anglicky</napoveda>
+			<riesenie>loop</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>vytvorenie detskeho procesu v unixe-e</napoveda>
+			<riesenie>fork</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>rozdelenie pamäte na rámce sa nazýva</napoveda>
+			<riesenie>stránkovanie</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>10 na 6 bajtov</napoveda>
+			<riesenie>gigabajt</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>program slúžiaci na ovladanie zariadeni (ovládač)</napoveda>
+			<riesenie>driver</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>dátový typ dátumu</napoveda>
+			<riesenie>date</riesenie>
+		</slovo>
+		<slovo>
+			<napoveda>read only memory pamäť</napoveda>
+			<riesenie>rom</riesenie>
+		</slovo>
+	</krizovka>
+</krizovky>
