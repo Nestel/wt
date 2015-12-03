@@ -21,6 +21,11 @@
 		<script src="js/menu.js"></script>
 		<!-- meniny javascript-->
 		<script src="js/meniny.js" ></script>
+
+		<script src="js/counter.js"></script>
+		<script>
+			insertCounter();
+		</script>
 	</head>
 	<body>
 		<nav class="navbar navbar-default">
@@ -55,7 +60,7 @@
 								<div class="form-group">
 									<input class="nsSmall form-control" type="text" id="meno" placeholder="Meno"/>
 								</div>
-								<button onclick="zobrazDatum()" type="button" class="btn btn-default">Nájdi dátum</button>
+								<button onclick="zobrazDatum()" type="button" class="btn btn-primary">Nájdi dátum</button>
 							</form>
 						</li>
 						<li>
@@ -63,19 +68,13 @@
 								<div class="form-group">
 									<input class="nsSmall form-control" type="text" id="datum" placeholder="Dátum"/>
 								</div>
-								<button onclick="zobrazMeno()" type="button" class="btn btn-default">Nájdi meno</button>
+								<button onclick="zobrazMeno()" type="button" class="btn btn-primary">Nájdi meno</button>
 							</form>
 						</li>		
 					</ul>
 				</div><!-- /.navbar-collapse -->
 			</div><!-- /.container-fluid -->
 		</nav>
-		
-		<!--<div id="datumPreMeno">
-		</div>
-
-		<div id="menoPreDatum">
-		</div>-->
 
 		<section id="pamiatky">
 			<h2>Pamiatky</h2>
@@ -83,58 +82,40 @@
 			<hr>
 
 			<div class="row">
-				<div class="col-sm-5 col-sm-offset-1 pamiatka">
-					<h3>Pamiatka 1</h3>
-					<hr>
-					<p>Bla bla bla a bla bla bla</p>
+				<div class="col-sm-6">
+					<div class="pamiatka">
+						<h3>Starý most Františka Jozefa I.</h3>
+						<hr>
+						<img src="img/stary_most.jpg">
+						<p>
+							Starý most Františka Jozefa I. bol prvým železným mostom, ktorý spojil Petržalku s Bratislavou.
+							O jeho výstavbe rozhodli poslanci 9. apríla 1877. Následne ju schválila uhorská vláda a Bratislava. 
+							Výstavba začala 12. augusta 1889 a most bol 30. decembra 1890 za prítomnosti cisára Františka Jozefa I. slávnostne odovzdaný do užívania.
+							Most mal dlžku 458,4 metrov, bol tvorený  7 poliami, z ktorých stredné pole bolo najväcšie, dlhé 92 metrov.
+							Piliere mali kesónové základy, ktoré siahali do hĺbky 14 m pod normálnou hladinou vody, 
+							boli murované z lomového kameňa a obložené žulovými kvádrami. Horná nosná konštrukcia vo 
+							všetkých poliach bola železná, stredná časť mosta bola zavesená na mohutný železný oblúk. 
+							Šírka mosta bola 6,5 m pre vozovú premávku a 3 m pre chodcov. Na bratislavskej a petržalskej strane boli postavené murované colnice 
+							na vyberanie mýta, na petržalskej strane aj skrinka prvej pomoci. 
+							Výstavba mosta stála 1 milión 780 tisíc zlatých.
+						</p>
+					</div>
 				</div>
 
-				<div class="col-sm-5 col-sm-offset-1 pamiatka">
-					<h3>Pamiatka 2</h3>
-					<hr>
-					<p>Bla bla bla a bla bla bla</p>
-				</div>
-			</div>
-
-			<div class="row">
-				<div class="col-sm-5 pamiatka">
-					<h3>Pamiatka 3</h3>
-					<hr>
-				</div>
-				<div class="col-sm-1"></div>
-				<div class="col-sm-5 pamiatka">
-					<h3>Pamiatka 4</h3>
-					<hr>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-sm-5 pamiatka">
-					<h3>Pamiatka 5</h3>
-					<hr>
-				</div>
-				<div class="col-sm-5 pamiatka">
-					<h3>Pamiatka 6</h3>
-					<hr>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-sm-5 pamiatka">
-					<h3>Pamiatka 7</h3>
-					<hr>
-				</div>
-				<div class="col-sm-5 pamiatka">
-					<h3>Pamiatka 8</h3>
-					<hr>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-sm-5 pamiatka">
-					<h3>Pamiatka 9</h3>
-					<hr>
-				</div>
-				<div class="col-sm-5 pamiatka">
-					<h3>Pamiatka 10</h3>
-					<hr>
+				<div class="col-sm-6">
+					<div class="pamiatka">
+						<h3>Skalnate pleso hvezdaren</h3>
+						<hr>
+						<img src="img/skalnate_pleso.jpg">
+						<p>
+							Astronomické observatórium Skalnaté Pleso sa nachádza neďaleko Skalnatého plesa v nadmorskej výške 1 786 nad hladinou mora. 
+							Observatórium bolo založené v roku 1943 keď boli vykonané jeho prvé pozorovania. 
+							Pôvodne bolo observatórium vybavené dvoma ďalekohľadmi: 0,6m (f=3,29) reflektorom firmy Zeiss 
+							a dvoma menšími ~0.2m reflektormi. Jeho prvím riaditeľom sa stal český astronóm Antonín Bečvář,
+							ktorý má hlavnú zásluhu na jeho vybudovaní. V budove observatória sa nachádza aj meteorologická stanica 
+							patriaca Geofyzikálnemu ústavu SAV.
+						</p>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -142,5 +123,11 @@
 		<footer>
 			Copyright &copy; 2015 Gabriel Kerekeš .PLP
 		</footer>
+		
+		<!-- pamiatky vyrovnanie script -->
+		<script>
+			$(function(){
+			});
+		</script>
 	</body>
 </html>
