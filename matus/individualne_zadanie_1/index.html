@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="utf-8">
+  <title>individualne_zadanie_1</title>
+
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="jquery-ui.css">
+  <link rel="stylesheet" href="jquery-ui.min.css">   
+  <link rel="stylesheet" href="jquery-ui.structure.css">
+  <link rel="stylesheet" href="jquery-ui.structure.min.css">
+  <link rel="stylesheet" href="jquery-ui.theme.css">
+  <link rel="stylesheet" href="jquery-ui.theme.min.css">
+  <link rel="stylesheet" href="matusCSS.css">
+
+  <!--<script src="jquery.js"></script>-->
+  <script src="jquery-ui.js"></script>
+  <script src="jquery-ui.min.js"></script>
+  <script src="matusJS.js"></script> 
+  <script src="matusJScookies.js"></script>
+  <script src="plotly-latest.min.js"></script> 
+
+
+
+
+</head>
+<body>
+  <div id="individualneZadanie1">
+    <div id="divPuzzle">
+      <img src="BA.png" id="imgBA" class="drag" alt="Obrázok sa nedá zobraziť">
+      <img src="TT.png" id="imgTT" class="drag">
+      <img src="NR.png" id="imgNR" class="drag">
+      <img src="TN.png" id="imgTN" class="drag">
+      <img src="BB.png" id="imgBB" class="drag">
+      <img src="ZA.png" id="imgZA" class="drag">
+      <img src="PO.png" id="imgPO" class="drag">
+      <img src="KE.png" id="imgKE" class="drag">
+    </div>
+
+    <div id="divMapa">
+    
+      	<img src="SVK.png" id="imgSVK">  
+
+      	<div id="divBA" class="drop"></div>
+      	<div id="divTT" class="drop"></div>
+      	<div id="divNR" class="drop"></div>
+      	<div id="divTN" class="drop"></div>
+      	<div id="divBB" class="drop"></div>
+      	<div id="divZA" class="drop"></div>
+      	<div id="divPO" class="drop"></div>
+      	<div id="divKE" class="drop"></div>
+    </div>
+
+
+    <script>
+    	var totalScore = 0;
+    	var droppedRegions = 0;
+    </script>
+
+    <div id="divScore">
+      	<p id="pScore">Aktuálny počet bodov: 0</p>
+
+ 		<button id="bNovaHra" class="inDivScore">Nová hra</button><br>
+
+      	<button class="inDivScore" data-toggle="popover" data-placement="right" data-content="Hra je ako klasické puzzle. Pomocou myši uchopte kraj slovenska a snažte sa ho umiestniť na správne miesto na mape slovenska. Ak budete blízko správneho miesta, kraj sa sám prichytí. Hra končí ak na mapu umiestnite všetkých 8 krajov.">Nápoveda</button><br>
+
+		<button id="bBodovanie" class="inDivScore" data-toggle="popover" data-placement="right" data-content="Ak vybraný kraj umiestnite na správne miesto na prvý krát, dostanete 1 bod. Ak kraj umiestnite na druhý krát dostanete 0,5 bodu. Inak nezískate žiaden bod. Maximálny počet bodov je 8, minimálny 0.">Bodovanie</button><br>
+
+		<button id="bZobrazitGraf" class="inDivScore">Zobraziť históriu výsledkov</button>
+
+  		<div id="youWon" class="alert alert-success inDivScore">
+  			<strong>Vyhrali ste!</strong>
+		</div>
+		<div id="myDiv"></div>
+    </div>
+
+  </div>
+  
+
+</body>
+</html>

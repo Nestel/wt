@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- Autor suboru: Katarina Zakova -->
+<!-- Posledna aktualizacia: marec 2015 -->
+<map>
+	<city>
+		<type>sk</type>
+		<name>Martin</name>
+		<latitude>49.065</latitude>  
+		<longitude>18.921944</longitude>      
+	</city>
+	<city>
+		<type>sk</type>
+		<name>Banská Štiavnica</name>
+		<latitude>48.458056</latitude>  
+		<longitude>18.896389</longitude>      
+	</city>
+	<city>
+		<type>eu</type>
+		<name>Madrid</name>
+		<latitude>40.383333</latitude>  
+		<longitude>-3.716667</longitude>      
+	</city>
+	<city>
+		<type>eu</type>
+		<name>Rome, Roma, Rím</name>
+		<latitude>41.9</latitude>  
+		<longitude>12.5</longitude>      
+	</city>   
+	<city>
+		<type>eu</type>
+		<name>Londýn, London</name>
+		<latitude>51.507222</latitude>  
+		<longitude>-0.1275</longitude>      
+	</city> 
+</map>

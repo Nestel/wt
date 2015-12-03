@@ -1,0 +1,106 @@
+#map {
+      width: 1100px;
+      height: 700px;
+      position: absolute;
+      margin-left:5px;
+      border-radius: 10px;
+}
+
+#buttonStart{
+	position: absolute;
+	left: 75px;
+	top:550px;
+	width: 150px;
+	height: 70px;
+}
+
+#buttonOk{
+	position: absolute;
+	left: 75px;
+	top:550px;
+	width: 150px;
+	height: 70px;
+	visibility: hidden;
+}
+
+#p{
+	position: absolute;
+	left:20px;
+}
+
+input{
+	position: absolute;
+	top:100px;
+	margin-left: 60px;
+	width: 150px;
+	left: 50px;
+	visibility: hidden;
+}
+
+#howToPlay{
+	width: 250px;
+	height: 300px;
+	background-image: URL("img/pozadnieForm.png");
+	margin:0 auto;
+	margin-top:130px;
+	border-radius: 10px;
+	padding-left: 15px;
+	padding-top: 1px; 
+	overflow-y:scroll;
+	border-width: 1px;
+}
+
+#ansLabel{
+	position: absolute;
+	top:100px;
+	margin-left: -30px;
+	width: 150px;
+	left: 50px;
+	visibility: hidden;
+}
+
+#buttonRestart{
+	display: none;
+	position: absolute;
+	left: 75px;
+	top:550px;
+	width: 150px;
+	height: 70px;
+}
+
+#menu{
+	background-image: URL("img/pozadnieForm.png");
+	width: 300px;
+	height: 700px;
+	position: absolute;
+	right:5px;
+	border-radius: 10px;
+}
+
+#envelope{
+	position: absolute;
+	width:1450px;
+	height:700px;
+
+}
+
+#envelopeRelative{
+	margin:0 auto;
+	width:1455px;
+	height:705px;
+}
+
+#myDiv{
+	display: none;
+	width:1200px;
+	height: 400px;
+	margin:0 auto;
+	margin-top: 50px;
+}
+
+#plotPlace{
+	width:1200px;
+	height: 300px;
+	margin:0 auto;
+	margin-top: 50px;
+}

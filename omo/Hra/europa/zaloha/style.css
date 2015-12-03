@@ -1,0 +1,25 @@
+#map {
+      width: 1100px;
+      height: 800px;
+      margin: 0 auto;
+      margin-top: 5%;
+      border-radius: 10px;
+}
+
+/*
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Slepá mapa</title>
+		<script src="https://maps.googleapis.com/maps/api/js"></script>
+		<script language="javascript" type="text/javascript" src="script.js"></script>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<div id="map"></div>
+	</body>
+</html>
+
+*/
