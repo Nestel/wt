@@ -186,14 +186,14 @@ function validujRiesenie(vys) {
 
 function kontrolujRiesenie() {
 	if( validujRiesenie(nacitajUdajeZTabulky()) ) {
-		document.getElementById('x').innerHTML += "<p class=\"spravne\">" + "Riešenie je SPRÁVNE!" + "<\p>";
+		document.getElementById('x').innerHTML += "<p class=\"bg-success\">" + "Riešenie je SPRÁVNE!" + "<\p>";
 		document.getElementById('body').innerHTML = "Získavate " +bodyKrizovka+ " body.";
 		saveScoreToCookie();
 	}
 	else {
 		bodyKrizovka--;
 		document.getElementById('body').innerHTML = "Počet možných kontrol riešení je: "+bodyKrizovka;
-		document.getElementById('x').innerHTML += "<p class=\"nespravne\">" + "Riešenie je NESPRÁVNE!" + "<\p>";
+		document.getElementById('x').innerHTML += "<p class=\"bg-danger\">" + "Riešenie je NESPRÁVNE!" + "<\p>";
 		if(bodyKrizovka == 0) {
 			saveScoreToCookie();
 		}

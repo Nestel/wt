@@ -11,6 +11,8 @@
 
 		<!-- main css file -->
 		<link rel="stylesheet" type="text/css" href="css/style.css">
+    	
+    	<script src="https://maps.googleapis.com/maps/api/js"></script>
 
 		<!-- jquery -->
 		<script src="js/jquery.js"></script>
@@ -24,6 +26,10 @@
 
 		<script src="js/counter.js"></script>
 		<script src="js/breadcrumbs.js"></script>
+
+		<!-- pamiatky script -->
+		<script src="js/mapaPamiatky.js"></script>
+		<script src="js/pamiatky.js"></script>
 	</head>
 	<body>
 		<nav class="navbar navbar-default">
@@ -45,14 +51,6 @@
 						
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
-						<li>			
-							<div id="dnesnyDatum">
-							</div>
-						</li>
-						<li>
-							<div id="dnesneMeniny">			
-							</div>
-						</li>
 						<li>
 							<form submit="return false" class="navbar-form navbar-right" role="searchName" id="meno-form">
 								<div class="form-group">
@@ -74,7 +72,19 @@
 			</div><!-- /.container-fluid -->
 		</nav>
 
-		<p id="breadcrumbs" class="no-topmargin"></p>
+		<div class="col-sm-6">
+			<p id="breadcrumbs" class="no-topmargin"></p>
+		</div>
+		<div class="col-sm-6">
+			<ul id="meniny" class="pull-right">				
+				<li>
+					<div id="dnesnyDatum"></div>
+				</li>
+				<li>
+					<div id="dnesneMeniny"></div>
+				</li>
+			</ul>
+		</div>
 
 		<section id="pamiatky">
 			<h2>Pamiatky</h2>
@@ -83,7 +93,7 @@
 
 			<div class="row">
 				<div class="col-sm-6">
-					<div class="pamiatka">
+					<div class="pamiatka lightblue">
 						<h3>Bratislava - Starý most Františka Jozefa I.</h3>
 						<hr>
 						<img src="img/stary_most.jpg">
@@ -103,7 +113,7 @@
 				</div>
 
 				<div class="col-sm-6">
-					<div class="pamiatka">
+					<div class="pamiatka darkblue">
 						<h3>Skalnaté pleso - hvezdáreň</h3>
 						<hr>
 						<img src="img/skalnate_pleso.jpg">
@@ -121,7 +131,7 @@
 
 			<div class="row">
 				<div class="col-sm-6">
-					<div class="pamiatka">
+					<div class="pamiatka darkblue">
 						<h3>Kráľová pri Senci - most</h3>
 						<hr>
 						<img src="img/kralova_pri_senci_most.jpg">
@@ -132,7 +142,7 @@
 				</div>
 
 				<div class="col-sm-6">
-					<div class="pamiatka">
+					<div class="pamiatka lightblue">
 						<h3>Bojnice - hradná studňa</h3>
 						<hr>
 						<img src="img/bojnice_hradna_studna.jpg">
@@ -152,7 +162,7 @@
 
 			<div class="row">
 				<div class="col-sm-6">
-					<div class="pamiatka">
+					<div class="pamiatka lightblue">
 						<h3>Hlohovec - zámok</h3>
 						<hr>
 						<img src="img/hlohovec_zamok.jpg">
@@ -164,7 +174,7 @@
 				</div>
 
 				<div class="col-sm-6">
-					<div class="pamiatka">
+					<div class="pamiatka darkblue">
 						<h3>Hurbanovo - hvezdáreň</h3>
 						<hr>
 						<img src="img/hurbanovo_hvezdaren.jpg">
@@ -172,6 +182,25 @@
 							Mesto Hurbanovo preslávila, okrem populárneho piva Zlatý bažant, najmä najstaršia slovenská hvezdáreň, ktorej história siaha až do roku 1871. V historickom parku v centre Hurbanova na juhu Slovenska sa nachádza najstaršia a najznámejšia slovenská hvezdáreň. Jej história siaha až do roku 1871. Veľké zásluhy na jej vzniku mal miestny rodák Dr. Mikuláš Konkoly-Thege, ktorý celý svoj majetok, dom, záhradu a všetko zariadenie observatória venoval v roku 1899 štátu. Dnes sa pracovníci hvezdárne v Hurbanove venujú výskumu aj výchovno-vzdelávacej činnosti. Hvezdáreň je prístupná verejnosti, a to nielen cez deň, ale aj večer s atraktívnym pozorovaním nočnej oblohy.
 						</p>
 					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="pamiatky-mapa">
+			<h2>Mapy pamiatok</h2>
+			<hr>
+			<div class="row text-center">
+				<div class="col-sm-5">
+					<h3>Pamiatky na Google mape</h3>
+					<hr>
+					<div id="google-map"></div>
+				</div>
+			    <div class="col-sm-7">
+					<h3>Pamiatky na obrázkovej mape</h3>
+					<hr>
+			    	<div id="image-map-div" class="global-center">
+				      	<img src="img/slovensko.png" alt="Mapa Slovenska" id = "image-map-image">
+				    </div>
 				</div>
 			</div>
 		</section>
@@ -185,6 +214,13 @@
 			$(function(){
     			bindEventToNavigation(); 
     			checkCookie();
+			});
+		</script>
+
+		<!-- on window resize script -->
+		<script>
+			$(window).resize(function(){
+				mapsInitialize();
 			});
 		</script>
 	</body>

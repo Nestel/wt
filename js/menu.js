@@ -1,4 +1,5 @@
-var menu = [{value: "Home", link: "/zp/"},
+var menu = [{value: "Pamiatky", link: "index.html"},
+			{value: "Mapa pamiatok", link: "index.html#pamiatky-mapa"},
 			{value: "Individuálne zadania", link: '#', submenu: [
 				{value: "Jano", link: "#", submenu: [{
 					value: "Krížovka", link: "krizovka.html"
@@ -8,7 +9,7 @@ var menu = [{value: "Home", link: "/zp/"},
 					{value: "Slepá mapa - Európa", link: "slepaMapaEuropa.html"
 				}]},
 				{value: "Vierka", link: "#", submenu: [{
-					value: "Vierkina uloha", link: "#"
+					value: "Anagramy", link: "anagramy.html"
 				}]},
 				{value: "Matus", link: "#", submenu: [{
 					value: "Matusova uloha", link: "#"

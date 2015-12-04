@@ -1,5 +1,6 @@
 body
 {
+    background-color: rgba(115, 201, 230, 0.05);
 }
 
 section
@@ -27,6 +28,32 @@ section
 #pamiatky
 {
     width: 100%;
+}
+
+.darkblue
+{
+    background-color: rgba(115, 201, 230, 0.7);
+}
+
+.lightblue
+{
+    background-color: rgba(115, 201, 230, 0.3);
+}
+
+.pamiatka
+{
+    border-radius: 5px;
+    margin-bottom: 30px;
+    padding: 10px;
+}
+
+.pamiatka img
+{
+    width: 50%;
+    height: auto;
+    float: left;
+    margin-right: 10px;
+    border-radius: 5px;
 }
 
 /* 3-level menu css begin */
@@ -106,22 +133,19 @@ h2
 #dnesnyDatum, #dnesneMeniny
 {
     color: #777;
+    font-size: 12px;
 }
 
-.pamiatka
+ul#meniny
 {
-	border-radius: 5px;
-	margin-bottom: 20px;
-    background-color: rgba(115, 201, 230, 0.3);
-    padding: 10px;
+    padding-right: 15px;
+    list-style: none;
 }
 
-.pamiatka img
+ul#meniny li
 {
-    width: 50%;
-    height: auto;
-    float: left;
-    margin-right: 10px;
+    display: inline-block;
+    margin-left: 20px;
 }
 
 input.noted
@@ -211,12 +235,6 @@ input.noted
 #datum
 {
     width: 80px;
-}
-
-#dnesnyDatum, #dnesneMeniny
-{
-    padding: 10px;
-    padding-top: 15px;
 }
 
 /* slepa mapa css begin */
@@ -324,6 +342,55 @@ input.noted
 
 /* slepa mapa css end */
 
+/* anagramy css begin */
+#all 
+{
+    display: inline-flex;
+}
+
+#sortable 
+{ 
+    list-style-type: none; 
+    margin: 0 auto; 
+    padding: 0;   
+    text-align: center;
+}
+
+#sortable li 
+{ 
+    margin: 0 3px 3px 3px; 
+    padding: 6px; 
+    padding-left: 13px; 
+    font-size: 20px; 
+    height: 38px; 
+    width: 38px;
+    display: inline-flex; 
+}
+
+#sortable li span 
+{ 
+    position: absolute; 
+    margin-left: -1.3em; 
+}
+
+#btn 
+{
+    margin:0 auto;
+    text-align: center;
+}
+
+#napoveda, #showScore, #chyba, #koniecAnagramov
+{
+    text-align: center;
+    margin: 0 auto;
+}
+
+#anagramy-opis
+{
+    overflow: auto;
+}
+/*anagramy css end */
+
 /* krizovka css begin */
 h1{
 font-size: 20pt;
@@ -363,6 +430,18 @@ th, td {
     background-color: none;
 }
 
+#x
+{
+    margin-top: 20px;
+}
+
+#x p
+{
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+}
+
 .spravne {
     background-color: green;
 }
@@ -375,3 +454,34 @@ th, td {
     background-color:none;
 }
 /* krizovka css end */
+
+/* pamiatky mapa css begin */
+#google-map 
+{
+    width: 100%;
+    height: 400px;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+#image-map-div
+{
+    position: relative;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+#image-map-image
+{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+/* pamiatky mapa css end */
+
+.global-center
+{
+    margin: auto;
+    width: 100%;
+}
