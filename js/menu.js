@@ -12,7 +12,7 @@ var menu = [{value: "Pamiatky", link: "index.html"},
 					value: "Anagramy", link: "anagramy.html"
 				}]},
 				{value: "Matus", link: "#", submenu: [{
-					value: "Matusova uloha", link: "#"
+					value: "Puzzle", link: "puzzle.html"
 				}]},
 				{value: "Gabriel", link: "#", submenu: [{
 					value: "Sudoku", link: "sudoku.html"

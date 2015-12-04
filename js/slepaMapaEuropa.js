@@ -327,6 +327,8 @@ function printScoresGraph(){
         var scores = getAllScores();
        
         scores = scoresToInt(scores);
+
+        console.log(scores);
  
         var trace = {
                 x: scores.length,
@@ -337,5 +339,5 @@ function printScoresGraph(){
  
         var data = [trace];
  
-        Plotly.newPlot('plotPlace', data);
+        Plotly.newPlot('myDiv', data);
 }

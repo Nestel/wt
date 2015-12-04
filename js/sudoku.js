@@ -184,8 +184,6 @@ function printScoresGraph(){
 
     var data = [trace];
 
-    console.log("wtf");
-
     Plotly.newPlot('myDiv', data);
 }
 

@@ -318,5 +318,5 @@ function printScoresGraph(){
  
         var data = [trace];
  
-        Plotly.newPlot('plotPlace', data);
+        Plotly.newPlot('myDiv', data);
 }

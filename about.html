@@ -4,24 +4,34 @@
 		<meta charset="UTF-8">
 		<meta name="author" content="Gabriel Kerekeš">
 
-		<title>O nás | EliteGroup</title>
+		<title>Záverečná práca | EliteGroup</title>
+
+		<!-- bootstrap css -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
 
 		<!-- main css file -->
 		<link rel="stylesheet" type="text/css" href="css/style.css">
-		<!-- bootstrap css -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" crossorigin="anonymous">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" crossorigin="anonymous">
+    	
+    	<script src="https://maps.googleapis.com/maps/api/js"></script>
 
 		<!-- jquery -->
 		<script src="js/jquery.js"></script>
-		<!-- bootstrap javascript -->
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" crossorigin="anonymous"></script>
+		<!-- bootstrap javascript -->		
+		<script src="js/bootstrap.min.js"></script>
+
 		<!-- menu javascript -->
-		<script defer src="js/menu.js"></script> 
+		<script src="js/menu.js"></script>
+		<!-- meniny javascript-->
+		<script src="js/meniny.js" ></script>
+
+		<script src="js/counter.js"></script>
 		<script src="js/breadcrumbs.js"></script>
+
+		<!-- pamiatky script -->
+		<script src="js/mapaPamiatky.js"></script>
+		<script src="js/pamiatky.js"></script>
 	</head>
 	<body>
-		<p id="breadcrumb"></p>
 		<nav class="navbar navbar-default">
 			<div class="container-fluid">
     		<!-- Brand and toggle get grouped for better mobile display -->
@@ -40,46 +50,256 @@
 					<ul id="navbar" class="nav navbar-nav">
 						
 					</ul>
-					<ul class="nav navbar-nav navbar-right">	
-						<form class="navbar-form navbar-right" role="search">
-							<div class="form-group">
-								<input type="text" class="form-control" placeholder="Dátum/meno">
-							</div>
-							<button type="submit" class="btn btn-default">Nájdi dátum/meno</button>
-						</form>
+					<ul class="nav navbar-nav navbar-right">
+						<li>
+							<form submit="return false" class="navbar-form navbar-right" role="searchName" id="meno-form">
+								<div class="form-group">
+									<input class="nsSmall form-control" type="text" id="meno" placeholder="Meno"/>
+								</div>
+								<button onclick="zobrazDatum()" type="button" class="btn btn-primary">Nájdi dátum</button>
+							</form>
+						</li>
+						<li>
+							<form submit="return false;" class="navbar-form navbar-right" role="searchDate">
+								<div class="form-group">
+									<input class="nsSmall form-control" type="text" id="datum" placeholder="Dátum"/>
+								</div>
+								<button onclick="zobrazMeno()" type="button" class="btn btn-primary">Nájdi meno</button>
+							</form>
+						</li>		
 					</ul>
 				</div><!-- /.navbar-collapse -->
 			</div><!-- /.container-fluid -->
-		</nav>
+		</nav>		
 
-		<section id="pamiatky">
-			<h2>O nás</h2>
+        <div class="row">
+            <div class="col-sm-6">
+                <p id="breadcrumbs" class="no-topmargin"></p>
+            </div>
+            <div class="col-sm-6">
+                <ul id="meniny" class="pull-right">             
+                    <li>
+                        <div id="dnesnyDatum"></div>
+                    </li>
+                    <li>
+                        <div id="dnesneMeniny"></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+		<section id="people">
+			<h2>Náš team</h2>
 			<hr>
 
 			<div class="row">
-				<div class="col-sm-5 col-sm-offset-1 pamiatka">
-					<h3>Ondrej Gálik</h3>
-					<hr>
-					<p>Bla bla bla a bla bla bla</p>
+				<div class="col-sm-4">
+					<div class="person lightblue">
+						<h3>
+							Matúš Brezovský
+							<img src="img/matus_brezovsky.jpg">
+						</h3>
+						<address>
+							<a href="mailto:gabriel.kerekes.ml@gmail.com">gabriel.kerekes.ml@gmail.com</a>
+						</address>
+					</div>
 				</div>
-
-				<div class="col-sm-5 col-sm-offset-1 pamiatka">
-					<h3>Pamiatka 2</h3>
-					<hr>
-					<p>Bla bla bla a bla bla bla</p>
+				<div class="col-sm-4">
+					<div class="person lightblue">
+						<h3>
+							Ondrej Gálik
+							<img src="img/ondrej_galik.jpg">
+						</h3>
+						<address>
+							<a href="mailto:gabriel.kerekes.ml@gmail.com">gabriel.kerekes.ml@gmail.com</a>
+						</address>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="person lightblue">
+						<h3>
+							Gabriel Kerekeš
+							<img src="img/gabriel_kerekes.jpg">
+						</h3>
+						<address>
+							<a href="mailto:gabriel.kerekes.ml@gmail.com">gabriel.kerekes.ml@gmail.com</a>
+						</address>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-4 col-sm-offset-2">
+					<div class="person lightblue">
+						<h3>
+							Ján Kováč
+							<img src="img/jan_kovac.jpg">
+						</h3>
+						<address>
+							<a href="mailto:gabriel.kerekes.ml@gmail.com">gabriel.kerekes.ml@gmail.com</a>
+						</address>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="person lightblue">
+						<h3>
+							Vierka Šidová
+							<img src="img/vierka_sidova.jpg">
+						</h3>
+						<address>
+							<a href="mailto:gabriel.kerekes.ml@gmail.com">gabriel.kerekes.ml@gmail.com</a>
+						</address>
+					</div>
 				</div>
 			</div>
 		</section>
 
+		<section id="tasks">			
+			<h2>Naše úlohy</h2>
+			<hr>
+
+			<div class="row">
+				<table id="tasks-table">
+					<tr>
+						<th class="vertical-head">Úloha/Osoba</th>
+						<th>Matúš</th>
+						<th>Ondrej</th>
+						<th>Gabriel</th>
+						<th>Ján</th>
+						<th>Vierka</th>
+					</tr>
+					<tr>
+						<th class="vertical-head">Trojúrovňové menu</th>
+						<td class="task-empty"></td>
+						<td class="task-empty"></td>
+						<td class="task-done"></td>
+						<td class="task-empty"></td>
+						<td class="task-empty"></td>
+					</tr>
+					<tr>
+						<th class="vertical-head">Meniny</th>
+						<td class="task-empty"></td>
+						<td class="task-empty"></td>
+						<td class="task-empty"></td>
+						<td class="task-done"></td>
+						<td class="task-empty"></td>
+					</tr>
+					<tr>
+						<th class="vertical-head">Pripomienkovač</th>
+						<td class="task-done"></td>
+						<td class="task-empty"></td>
+						<td class="task-empty"></td>
+						<td class="task-empty"></td>
+						<td class="task-empty"></td>
+					</tr>
+					<tr>
+						<th class="vertical-head">Počítadlo návštev</th>
+						<td class="task-empty"></td>
+						<td class="task-empty"></td>
+						<td class="task-empty"></td>
+						<td class="task-empty"></td>
+						<td class="task-done"></td>
+					</tr>
+					<tr>
+						<th class="vertical-head">Breadcrumbs</th>
+						<td class="task-empty"></td>
+						<td class="task-empty"></td>
+						<td class="task-empty"></td>
+						<td class="task-empty"></td>
+						<td class="task-done"></td>
+					</tr>
+					<tr>
+						<th class="vertical-head">Mapa pamiatok</th>
+						<td class="task-empty"></td>
+						<td class="task-done"></td>
+						<td class="task-empty"></td>
+						<td class="task-empty"></td>
+						<td class="task-empty"></td>
+					</tr>
+					<tr>
+						<th class="vertical-head">Časová os pamiatok</th>
+						<td class="task-empty"></td>
+						<td class="task-empty"></td>
+						<td class="task-done"></td>
+						<td class="task-empty"></td>
+						<td class="task-empty"></td>
+					</tr>
+					<tr>
+						<th class="vertical-head">O nás</th>
+						<td class="task-empty"></td>
+						<td class="task-empty"></td>
+						<td class="task-done"></td>
+						<td class="task-empty"></td>
+						<td class="task-empty"></td>
+					</tr>
+					<tr>
+						<th class="vertical-head">Zobrazenie pamiatok</th>
+						<td class="task-empty"></td>
+						<td class="task-empty"></td>
+						<td class="task-done"></td>
+						<td class="task-empty"></td>
+						<td class="task-empty"></td>
+					</tr>
+					<tr>
+						<th class="vertical-head">Anagramy</th>
+						<td class="task-empty"></td>
+						<td class="task-empty"></td>
+						<td class="task-empty"></td>
+						<td class="task-empty"></td>
+						<td class="task-done"></td>
+					</tr>
+					<tr>
+						<th class="vertical-head">Krížovka</th>
+						<td class="task-empty"></td>
+						<td class="task-empty"></td>
+						<td class="task-empty"></td>
+						<td class="task-done"></td>
+						<td class="task-empty"></td>
+					</tr>
+					<tr>
+						<th class="vertical-head">Puzzle</th>
+						<td class="task-done"></td>
+						<td class="task-empty"></td>
+						<td class="task-empty"></td>
+						<td class="task-empty"></td>
+						<td class="task-empty"></td>
+					</tr>
+					<tr>
+						<th class="vertical-head">Slepá mapa</th>
+						<td class="task-empty"></td>
+						<td class="task-done"></td>
+						<td class="task-empty"></td>
+						<td class="task-empty"></td>
+						<td class="task-empty"></td>
+					</tr>
+					<tr>
+						<th class="vertical-head">Sudoku</th>
+						<td class="task-empty"></td>
+						<td class="task-empty"></td>
+						<td class="task-done"></td>
+						<td class="task-empty"></td>
+						<td class="task-empty"></td>
+					</tr>
+					<tr>
+						<th class="vertical-head">Grafický návrh</th>
+						<td class="task-empty"></td>
+						<td class="task-empty"></td>
+						<td class="task-done"></td>
+						<td class="task-empty"></td>
+						<td class="task-empty"></td>
+					</tr>
+				</table>
+			</div>	
+		</section>
+
 		<footer>
-			Copyright &copy; 2015 Gabriel Kerekeš .PLP
+			<p id="visitCounter">Počet vašich návštev: </p>
 		</footer>
+		
 		<!-- on load script -->
 		<script>
 			$(function(){
-				bindEventToNavigation();
-    			checkCookie();
-    			//sessionStorage.clear();
+    			bindEventToNavigation(); 
+    			vypisCookie();
 			});
 		</script>
 	</body>

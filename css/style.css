@@ -1,6 +1,7 @@
 body
 {
     background-color: rgba(115, 201, 230, 0.05);
+    padding-top: 50px;
 }
 
 section
@@ -56,7 +57,32 @@ section
     border-radius: 5px;
 }
 
+.person
+{
+    border-radius: 5px;
+    margin-bottom: 30px;
+    padding: 15px;
+    padding-bottom: 25px;
+    overflow: hidden;
+}
+
+.person img
+{
+    width: 35%;
+    height: auto;
+    float: right;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
 /* 3-level menu css begin */
+nav
+{
+    position: fixed !important;
+    top: 0;
+    z-index: 2;
+}
+
 .navbar
 {
     width: 100%;
@@ -237,6 +263,36 @@ input.noted
     width: 80px;
 }
 
+#tasks-table
+{
+    border: 1px solid black;
+    margin: auto;
+    border-radius: 5px;
+}
+
+td.task-empty
+{
+    background-color: #73C9E6;
+}
+
+td.task-done
+{
+    background-color: green;
+}
+
+#tasks-table tr, #tasks-table td, #tasks-table th
+{
+    text-align: center;
+    border: 1px solid black;
+    width: 100px;
+    padding: 5px 15px;
+}
+
+.vertical-head
+{
+    width: 180px !important;
+}
+
 /* slepa mapa css begin */
 #map {
       width: 1100px;
@@ -403,11 +459,11 @@ text-align: center;
     padding: 10px;
 }
 
-table, th, td {
+table#ttt, table#ttt tr th, table#ttt tr td {
     border-collapse: collapse;
 }
 
-th, td {
+table#ttt tr th, table#ttt tr td {
     padding: 10px;
 }
 
@@ -480,8 +536,187 @@ th, td {
 }
 /* pamiatky mapa css end */
 
+/* puzzle css begin */
+
+#divMapa
+{
+    width: 100%;
+    border-radius: 5px;
+    background-color: grey;
+    height: 330px;
+}
+
+#imgSVK
+{
+    z-index: 0;
+}
+
+#divPuzzle
+{
+    width: 100%;
+    border-radius: 5px;
+    background-color: grey;
+    padding-left: 20px;
+}
+
+#divScore
+{
+    border-radius: 5px;
+    background-color: lightyellow;
+    font-family: sans-serif;
+    font-size: 16px;
+    padding: 20px;
+    margin-top: 40px;
+
+}
+
+.inDivScore
+{
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+#youWon
+{
+    margin-top: 10px;
+    display: none;
+    padding-top: 10px;
+}
+
+.drop
+{
+    position: absolute;
+    /*border-style: solid;
+    border-width: 1px;*/
+}
+
+.drag
+{
+    /*  border-style: solid;
+    border-width: 1px;*/
+}
+
+/**************************************/
+
+#imgBA
+{
+    z-index: 1;
+}
+
+#imgTT
+{
+    z-index: 1;
+}
+#imgNR
+{
+    z-index: 1;
+}
+#imgTN
+{
+    z-index: 1;
+}
+#imgBB
+{
+    z-index: 1;
+}
+#imgZA
+{
+    z-index: 1;
+}
+#imgPO
+{
+    z-index: 1;
+}
+
+#imgKE
+{
+    z-index: 1;
+}
+  
+
+/**************************************/
+
+#divBA
+{
+    top: 151px;
+    left: 37px;
+
+    width: 72px;
+    height: 96px;
+}
+
+#divTT
+{
+    top: 111px;
+    left: 39px;
+
+    width: 120px;
+    height: 180px;
+}
+
+#divNR
+{
+    top: 139px;
+    left: 114px;
+
+    width: 150px;
+    height: 150px;
+}
+
+#divTN
+{
+    top: 49px;
+    left: 82px;
+
+    width: 156px;
+    height: 132px;
+}
+
+#divBB
+{
+    top: 105px;
+    left: 188px;
+
+    width: 210px;
+    height: 138px;
+}
+
+#divZA
+{
+    top: 8px;
+    left: 184px;
+
+    width: 168px;
+    height: 138px;
+}
+
+#divPO
+{
+    top: 32px;
+    left: 326px;
+
+    width: 270px;
+    height: 108px;
+}
+
+#divKE
+{
+    top: 97px;
+    left: 357px;
+
+    width: 222px;
+    height: 102px;
+}
+
+/*puzzle css end */
+
 .global-center
 {
     margin: auto;
     width: 100%;
+}
+
+.row, .navbar
+{
+    margin-right: 0 !important;
 }

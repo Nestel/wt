@@ -87,23 +87,31 @@
 			<hr>
 
 			<div class="row">
-				<div class="col-sm-3">
-					<h3>Notes</h3>
+				<div class="col-sm-6">
+					<form id="sudoku-form">
+						<p id="sudoku-score">SKÓRE: 0</p>
+					</form>
+				</div>
+				<div class="col-sm-2">
+					<h3>Poznámky</h3>
 					<hr>
 					<p id="sudoku-notes">Žiadne poznámky</p>
 					<form id="sudoku-notes-form">
 						<input type='text' id="sudoku-notes-input">
 					</form>
 				</div>
-				<div class="col-sm-6">
-					<form id="sudoku-form">
-						<p id="sudoku-score">SCORE: 0</p>
-					</form>
-				</div>
-				<div class="col-sm-3">
+				<div class="col-sm-4">
 					<h3>Návod</h3>
 					<hr>
-					<p>bla bla bla bla bla bla bla bla bla bla </p>
+					<p><strong>Cieľom</strong> hry je v každom riadku, v každom stĺpci a v každej vyznačenej
+					3x3 oblasti mať každé čislo práve raz.</p>
+					<p><strong>Ovládanie</strong> Čísla vpisujete kliknutím na políčko a zapísaním hodnoty.</p>
+					<p><strong>Bodovanie</strong> Pri vložení správnej hodnoty, hodnota ostane napísaná v políčku,
+					políčko sa zafarbí na zeleno a pripočítajú sa vám 3 body. Pri vložení
+					nesprávnej hodnoty, sa hodnota zmaže a vy stratíte 1 bod.</p>
+					<p><strong>Poznámky</strong> Pre vloženie poznámky je potrebné najprv kliknúť do políčka, ku ktorému
+					chcete poznámku pridať a následne do ľavej kolónky Poznámky napísať poznámku. Pri kliknutí do políčka sa tieto poznámky zobrazujú nad kolónkou
+					Poznámky.
 				</div>
 			</div>
 		</section>
