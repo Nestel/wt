@@ -87,10 +87,10 @@ function clickPoints(){
     marker.setMap(null);    
     var index = randomIndexes[arrayIndex];
     var pocetKliknuti = 0;
-    var spodnaHranica = Number(europeanCity[index].latitude) - 1.2;
-    var hornaHranica = Number(europeanCity[index].latitude) + 1.2;
-    var pravaHranica = Number(europeanCity[index].longitude) + 1.2;
-    var lavaHranica = Number(europeanCity[index].longitude) - 1.2;
+    var spodnaHranica = Number(europeanCity[index].latitude) - 1.4;
+    var hornaHranica = Number(europeanCity[index].latitude) + 1.4;
+    var pravaHranica = Number(europeanCity[index].longitude) + 1.4;
+    var lavaHranica = Number(europeanCity[index].longitude) - 1.4;
     document.getElementById('p').innerHTML = "Vyznačte miesto na mape, kde sa nachádza <b>" + europeanCity[index].city + "</b>";
 
    google.maps.event.addListener(map, "click", function(event) {

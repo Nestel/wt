@@ -6,9 +6,9 @@
 }
 
 #pictureDiv{
-	margin: 0 auto;
-	max-width:1000px;
-	max-height:524px;
+	position: absolute;
+	width:1000px;
+	height:524px;
 	margin-top: 50px;
 	left:200px;
 	border-radius: 10px;
