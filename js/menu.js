@@ -34,7 +34,7 @@ function appendMenuToNavbar()
 
 		if (currentMenu.submenu != undefined)
 		{
-			htmlString += "<li class='dropdown'><a href='" + currentMenu.link + "'class='dropdown-toggle' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false'>" + currentMenu.value+ "<span class='caret'></span></a>";
+			htmlString += "<li><a href='" + currentMenu.link + "'class='dropdown-toggle' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false'>" + currentMenu.value+ "<span class='caret'></span></a>";
 			htmlString += "<ul class='dropdown-menu'>";
 
 			for (var j = 0; j < currentMenu.submenu.length; j++)
@@ -49,13 +49,13 @@ function appendMenuToNavbar()
 					for (var k = 0; k < currentSubmenu.submenu.length; k++)
 					{
 						currentSubsubmenu = currentSubmenu.submenu[k];
-						htmlString += "<li><a href='" + currentSubsubmenu.link + "'>" + currentSubsubmenu.value + "</a></li>";
+						htmlString += "<li><a class='navigation_links' href='" + currentSubsubmenu.link + "'>" + currentSubsubmenu.value + "</a></li>";
 					}
 					htmlString += "</ul></li>";
 				}
 				else
 				{
-					htmlString += "<li><a href='" + currentSubmenu.link + "'>" + currentSubmenu.value + "</a></li>";
+					htmlString += "<li><a class='navigation_links' href='" + currentSubmenu.link + "'>" + currentSubmenu.value + "</a></li>";
 				}
 			}	
 
@@ -63,7 +63,7 @@ function appendMenuToNavbar()
 		}
 		else
 		{
-			htmlString += "<li class='dropdown'><a href='" + currentMenu.link + "'>" + currentMenu.value + "</a>";
+			htmlString += "<li><a class='navigation_links' href='" + currentMenu.link + "'>" + currentMenu.value + "</a>";
 		}
 	}
 

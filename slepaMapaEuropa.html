@@ -3,25 +3,25 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Slepá mapa</title><!-- bootstrap css -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" crossorigin="anonymous">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" crossorigin="anonymous">
+		
+		<!-- bootstrap css -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
 
 		<!-- main css file -->
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 
 		<!-- jquery -->
 		<script src="js/jquery.js"></script>
-		<!-- bootstrap javascript -->
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" crossorigin="anonymous"></script>
-
+		<!-- bootstrap javascript -->		
+		<script src="js/bootstrap.min.js"></script>
+		
+		<!-- menu javascript -->
 		<script src="js/menu.js"></script>
 		<!-- meniny javascript-->
 		<script src="js/meniny.js" ></script>
 
 		<script src="js/counter.js"></script>
-		<script>
-			insertCounter();
-		</script>
+		<script src="js/breadcrumbs.js"></script>
 
 		<script src="https://maps.googleapis.com/maps/api/js"></script>
 		<script type="text/JavaScript" src="js/plotly-latest.min.js"></script>
@@ -75,6 +75,9 @@
 				</div><!-- /.navbar-collapse -->
 			</div><!-- /.container-fluid -->
 		</nav>
+
+		<p id="breadcrumbs" class="no-margin"></p>
+
 		<div id="envelopeRelative">
 			<div id="envelope">
 				<div id = "menu">
@@ -94,9 +97,27 @@
 				<div id="map"></div>
 			</div>
 		</div>
-		<div id="myDiv">
-			<h1 style="text-align:center">Graf histórie hier</h1>
-			<div id ="plotPlace"></div>
-		</div>
+		
+		<section id="graf">
+			<div class="row">
+				<h2>Graf vašich skóre</h2>
+				<hr class="no-margin">
+				<div id="myDiv">
+
+				</div>
+			</div>
+		</section>	
+
+		<footer>
+			<p id="visitCounter">Počet návštev: </p>
+		</footer>
+		
+		<!-- on load script -->
+		<script>
+			$(function(){
+    			bindEventToNavigation(); 
+    			vypisCookie();
+			});
+		</script>
 	</body>
 </html>

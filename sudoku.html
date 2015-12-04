@@ -8,26 +8,27 @@
 		<title>Sudoku | EliteGroup</title>
 
 		<!-- bootstrap css -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" crossorigin="anonymous">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" crossorigin="anonymous">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
 
 		<!-- main css file -->
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 
 		<!-- jquery -->
 		<script src="js/jquery.js"></script>
-		<!-- bootstrap javascript -->
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" crossorigin="anonymous"></script>
-		<script src="js/plotly.js"></script>
-		<!-- sudoku javascript -->
-		<script src="js/sudoku.js"></script>
+		<!-- bootstrap javascript -->		
+		<script src="js/bootstrap.min.js"></script>
+		
 		<!-- menu javascript -->
-		<script src="js/menu.js"></script> 
+		<script src="js/menu.js"></script>
+		<!-- meniny javascript-->
+		<script src="js/meniny.js" ></script>
 
 		<script src="js/counter.js"></script>
-		<script>
-			insertCounter();
-		</script>
+		<script src="js/breadcrumbs.js"></script>
+
+		<script type="text/JavaScript" src="js/plotly-latest.min.js"></script>
+		<script src="js/sudoku.js"></script>
+	</head>
 	</head>
 	<body>
 		<nav class="navbar navbar-default">
@@ -78,6 +79,8 @@
 			</div><!-- /.container-fluid -->
 		</nav>
 
+		<p id="breadcrumbs" class="no-topmargin"></p>
+
 		<section id="sudoku">
 			<h2>Sudoku</h2>
 
@@ -116,7 +119,15 @@
 		</section>
 
 		<footer>
-			Copyright &copy; 2015 Gabriel Kerekeš .PLP
+			<p id="visitCounter">Počet vašich návštev: </p>
 		</footer>
+		
+		<!-- on load script -->
+		<script>
+			$(function(){
+    			bindEventToNavigation(); 
+    			vypisCookie();
+			});
+		</script>
 	</body>
 </html>

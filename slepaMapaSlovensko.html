@@ -3,25 +3,25 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Slepá mapa</title><!-- bootstrap css -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" crossorigin="anonymous">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" crossorigin="anonymous">
+		
+		<!-- bootstrap css -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
 
 		<!-- main css file -->
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 
 		<!-- jquery -->
 		<script src="js/jquery.js"></script>
-		<!-- bootstrap javascript -->
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" crossorigin="anonymous"></script>
-
+		<!-- bootstrap javascript -->		
+		<script src="js/bootstrap.min.js"></script>
+		
+		<!-- menu javascript -->
 		<script src="js/menu.js"></script>
 		<!-- meniny javascript-->
 		<script src="js/meniny.js" ></script>
 
 		<script src="js/counter.js"></script>
-		<script>
-			insertCounter();
-		</script>
+		<script src="js/breadcrumbs.js"></script>
 
 		<script src="https://maps.googleapis.com/maps/api/js"></script>
 		<script type="text/JavaScript" src="js/plotly-latest.min.js"></script>
@@ -76,29 +76,50 @@
 			</div><!-- /.container-fluid -->
 		</nav>
 
-		<div id="envelopeRelative">
-			<div id = "envelope">
-				<div id = "menu">
-					<button type="button" onclick="main()" id="buttonStart">Začať hru!</button>
-					<p id="p">Kliknutím na tlačidlo <b>Začat hru!</b> začnete hrať.</p>
-					<label for="input" id="ansLabel">Odpoveď: </label>
-					<input type="inputText" value = "" id = "input">
-					<div id = "howToPlay">
-						<h3>Návod:</h3>
-						<p>
-							Jedná sa o hru, pri ktorej sa hľadá dané mesto na slepej mape Slovenska. Sú dve varianty hľadania. Pri jednej sa zjaví bod na mape a hráč musí napísať o aké mesto sa jedná. Názov je možné zadávať bez diakritiky, či rozlišovanie veľkých a malých písmen. Pri druhej variante sa vypíše mesto a hráč musí kliknúť na bod na mape, kde si myslí, že dané mesto leží. Samozrejme, je nastavená určitá prípustná hranica odchýlky.<br><br><b>Bodovanie je nasledovné:</b> Pri uhadnutí správnej odpovede získava hráč 2 body, pri nesprávnom zodpovedaní otázky jeden bod stráca. Po skončení hry sa vypíše graf priebehu získaných bodov za všetky hry a konečné bodové hodnotenie za práve dohranú hru.
-						</p>
+		<p id="breadcrumbs" class="no-topmargin"></p>
+
+		<section>
+			<div id="envelopeRelative">
+				<div id = "envelope">
+					<div id = "menu">
+						<button type="button" onclick="main()" id="buttonStart">Začať hru!</button>
+						<p id="p">Kliknutím na tlačidlo <b>Začat hru!</b> začnete hrať.</p>
+						<label for="input" id="ansLabel">Odpoveď: </label>
+						<input type="inputText" value = "" id = "input">
+						<div id = "howToPlay">
+							<h3>Návod:</h3>
+							<p>
+								Jedná sa o hru, pri ktorej sa hľadá dané mesto na slepej mape Slovenska. Sú dve varianty hľadania. Pri jednej sa zjaví bod na mape a hráč musí napísať o aké mesto sa jedná. Názov je možné zadávať bez diakritiky, či rozlišovanie veľkých a malých písmen. Pri druhej variante sa vypíše mesto a hráč musí kliknúť na bod na mape, kde si myslí, že dané mesto leží. Samozrejme, je nastavená určitá prípustná hranica odchýlky.<br><br><b>Bodovanie je nasledovné:</b> Pri uhadnutí správnej odpovede získava hráč 2 body, pri nesprávnom zodpovedaní otázky jeden bod stráca. Po skončení hry sa vypíše graf priebehu získaných bodov za všetky hry a konečné bodové hodnotenie za práve dohranú hru.
+							</p>
+						</div>
+						<button type="button" onclick="findCity()" id = "buttonOk">Potvrdiť</button>
+						<button type="button" onclick="restart()" id = "buttonRestart">Nová hra.</button>
 					</div>
-					<button type="button" onclick="findCity()" id = "buttonOk">Potvrdiť</button>
-					<button type="button" onclick="restart()" id = "buttonRestart">Nová hra.</button>
+					<div id="map"></div>
 				</div>
-				<div id="map"></div>
 			</div>
-		</div>
-		<div id="myDiv">
-			<h1 style="text-align:center">Graf histórie hier</h1>
-			<div id ="plotPlace"></div>
-		</div>
+		</section>
 		
+		<section id="graf">
+			<div class="row">
+				<h2>Graf vašich skóre</h2>
+				<hr class="no-margin">
+				<div id="myDiv">
+
+				</div>
+			</div>
+		</section>
+
+		<footer>
+			<p id="visitCounter">Počet návštev: </p>
+		</footer>
+
+		<!-- on load script -->
+		<script>
+			$(function(){
+    			bindEventToNavigation(); 
+    			vypisCookie();
+			});
+		</script>		
 	</body>
 </html>

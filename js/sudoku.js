@@ -162,6 +162,11 @@ function getCookie(name)
 		}
 	}
 
+	if (searchedCookie == undefined)
+	{
+		searchedCookie += document.cookie = SCORES_COOKIE_NAME + "=" + 0 + ",;";
+	}
+
 	return searchedCookie;
 }
 
@@ -178,6 +183,8 @@ function printScoresGraph(){
     };
 
     var data = [trace];
+
+    console.log("wtf");
 
     Plotly.newPlot('myDiv', data);
 }

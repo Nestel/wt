@@ -1,93 +1,57 @@
-function nameDefined(ckie,nme)
+function setCookie(cookieName,cookieValue,expirationDays) 
 {
-    var splitValues;
-    var i;
-
-    for (i = 0;i < ckie.length; ++i)
-    {
-        splitValues = ckie[i].split("=");
-        
-        if (splitValues[0] == nme) 
-        {
-            return true;
-        }
-    }
-
-    return false;
+    var d = new Date();
+    d.setTime(d.getTime() + (expirationDays*24*60*60*1000));
+    
+    var expires = "expires=" + d.toGMTString();
+    document.cookie = cookieName + "=" + cookieValue + "; " + expirationDays;
 }
 
-function delBlanks(strng)
+function getCookie(cookieName) 
 {
-    var result = "";
-    var i;
-    var chrn;
-
-    for (i = 0;i < strng.length; ++i) 
+    var name = cookieName + "=";
+    var ca = document.cookie.split(';');
+    
+    for(var i=0; i<ca.length; i++) 
     {
-        chrn = strng.charAt(i);
+        var c = ca[i];
         
-        if (chrn != " ")
+        while (c.charAt(0) == ' ')
         {
-            result += chrn;
+            c = c.substring(1);
+        }
+
+        if (c.indexOf(name) == 0) 
+        {
+            return c.substring(name.length, c.length);
         }
     }
-
-    return result;
-}
-
-function getCookieValue(ckie,nme)
-{
-    var splitValues;
-    var i;
-
-    for(i = 0;i < ckie.length; ++i) 
-    {
-        splitValues = ckie[i].split("=");
-        
-        if(splitValues[0] == nme) 
-        {
-            return splitValues[1];
-        }
-    }
-
+    
     return "";
 }
-   
-function insertCounter() 
-{
-    readCookie();
-}
 
-function displayCounter() 
+function checkCookie() 
 {
     var counterElement = document.getElementById("visitCounter");
-    counterElement.innerHTML += " " + counter;
+    var cookie = getCookie("visitCounter");
+
+    if (cookie != "") 
+    {
+        cookie++;
+    } 
+    else 
+    {
+        cookie = 1;
+    }
+
+    setCookie("visitCounter", cookie, 30);
+    
+    document.getElementById("visitCounter").innerHTML += cookie;
 }
 
-function readCookie() 
-{
-    var cookie = document.cookie;
-    
-    counter = 0;
-    
-    var chkdCookie = delBlanks(cookie);  
-    var nvpair = chkdCookie.split(";");
-    
-    if(nameDefined(nvpair,"pageCount"))
-    {
-        counter = parseInt(getCookieValue(nvpair,"pageCount"));
-    }
-    ++counter;
-    
-    var futdate = new Date();
-    var expdate = futdate.getTime();
-    
-    expdate += 3600000 * 24 *30;  
-    futdate.setTime(expdate);
 
-    var newCookie = "pageCount=" + counter;
-    
-    newCookie += "; expires=" + futdate.toGMTString();
-    
-    window.document.cookie = newCookie;
+function vypisCookie() 
+{
+    var cookie = getCookie("visitCounter");
+    document.getElementById("visitCounter").innerHTML += cookie.split("=")[1];
 }

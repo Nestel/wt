@@ -18,8 +18,10 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" crossorigin="anonymous"></script>
 		<!-- menu javascript -->
 		<script defer src="js/menu.js"></script> 
+		<script src="js/breadcrumbs.js"></script>
 	</head>
 	<body>
+		<p id="breadcrumb"></p>
 		<nav class="navbar navbar-default">
 			<div class="container-fluid">
     		<!-- Brand and toggle get grouped for better mobile display -->
@@ -72,5 +74,13 @@
 		<footer>
 			Copyright &copy; 2015 Gabriel Kerekeš .PLP
 		</footer>
+		<!-- on load script -->
+		<script>
+			$(function(){
+				bindEventToNavigation();
+    			checkCookie();
+    			//sessionStorage.clear();
+			});
+		</script>
 	</body>
 </html>

@@ -1,4 +1,5 @@
-function bindEventToNavigation(){
+function bindEventToNavigation()
+{
     showBreadCrumb();
     $.each($("#navigation_links > li"), function(index, element){
         $(element).click(function(event){
@@ -9,7 +10,8 @@ function bindEventToNavigation(){
 }
 
 
-function breadcrumbStateSaver(text){
+function breadcrumbStateSaver(text)
+{
     //here we'll check if the browser has storage capabilities
     if(typeof(Storage) != "undefined"){
         if(sessionStorage.breadcrumb){
@@ -23,7 +25,8 @@ function breadcrumbStateSaver(text){
     //if not you can build in a failover with cookies
 }
 
-function showBreadCrumb(){
+function showBreadCrumb()
+{
     var breads = [];
     if(sessionStorage.breadcrumb) {
         var bc = sessionStorage.breadcrumb.toString();
@@ -38,6 +41,5 @@ function showBreadCrumb(){
     }
     else {
         $("#breadcrumb").html(sessionStorage.breadcrumb); 
-    }
-       
+    }       
 }

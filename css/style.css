@@ -9,6 +9,16 @@ section
     margin-bottom: 40px;
 }
 
+.no-margin
+{
+    margin: 0;
+}
+
+.no-topmargin
+{
+    margin-top: 0;
+}
+
 #sudoku-form
 {
     text-align: center;
@@ -19,12 +29,12 @@ section
     width: 100%;
 }
 
+/* 3-level menu css begin */
 .navbar
 {
     width: 100%;
     border: 0;
-    height: 50px;
-    margin-bottom: 40px;
+    margin-bottom: 0;
 }
 
 .navbar-nav, .navbar-collapse, .navbar-header,
@@ -33,7 +43,7 @@ section
     background-color: #73C9E6;
 }
 
-.navbar-nav li:hover
+#navbar li:hover
 {
     background-color: #3088A6;
 }
@@ -42,6 +52,7 @@ section
 {
     color: #fff !important;
 }
+
 .navbar-brand
 {
     color: white !important;
@@ -51,11 +62,6 @@ section
 .navbar-brand:hover
 {
     color: #777 !important;
-}
-
-#dnesnyDatum, #dnesneMeniny
-{
-    color: #777;
 }
 
 .navbar-default .navbar-nav > .open > a, 
@@ -77,10 +83,29 @@ section
 {
     background-color: #73C9E6;
 }
+/* 3-level menu css end */
+
+#breadcrumbs
+{
+    padding-left: 15px;
+}
+
+#breadcrumbs a
+{
+    background-color: rgba(0,0,0,0);
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+}
 
 h2
 {
     text-align: center;
+}
+
+#dnesnyDatum, #dnesneMeniny
+{
+    color: #777;
 }
 
 .pamiatka
@@ -194,41 +219,27 @@ input.noted
     padding-top: 15px;
 }
 
-#myDiv
-{
-    width: 100%;
-    height: 400px;
-}
-
 /* slepa mapa css begin */
 #map {
       width: 1100px;
-      height: 600px;
+      height: 725px;
       position: absolute;
       margin-left:5px;
       border-radius: 10px;
 }
 
-#myDiv{
-    display: none;
-    width:1200px;
-    height: 400px;
-    margin:0 auto;
-    margin-top: 50px;
-}
-
 #buttonStart{
     position: absolute;
-    left: 75px;
-    top:500px;
+    left: 90px;
+    top:565px;
     width: 150px;
     height: 70px;
 }
 
 #buttonOk{
     position: absolute;
-    left: 75px;
-    top:500px;
+    left: 90px;
+    top:565px;
     width: 150px;
     height: 70px;
     visibility: hidden;
@@ -236,7 +247,6 @@ input.noted
 
 #p{
     position: absolute;
-    top: 20px;
     left:20px;
 }
 
@@ -247,43 +257,6 @@ input.noted
     width: 150px;
     left: 50px;
     visibility: hidden;
-}
-
-#buttonRestart{
-    display: none;
-    position: absolute;
-    left: 75px;
-    top:500px;
-    width: 150px;
-    height: 70px;
-}
-
-#menu{
-    background-image: URL("../img/pozadnieForm.png");
-    width: 300px;
-    height: 600px;
-    position: absolute;
-    right:5px;
-    border-radius: 10px;
-}
-
-#envelope{
-    position: absolute;
-    width:1450px;
-    height:600px;
-}
-
-#envelopeRelative{
-    margin:0 auto;
-    width:1455px;
-    height:605px;
-}
-
-#plotPlace{
-    width:1200px;
-    height: 300px;
-    margin:0 auto;
-    margin-top: 50px;
 }
 
 #howToPlay{
@@ -307,6 +280,48 @@ input.noted
     left: 50px;
     visibility: hidden;
 }
+
+#buttonRestart{
+    display: none;
+    position: absolute;
+    left: 90px;
+    top:565px;
+    width: 150px;
+    height: 70px;
+}
+
+#menu{
+    background-image: URL("../img/pozadnieForm.png");
+    width: 300px;
+    height: 700px;
+    position: absolute;
+    right:5px;
+    border-radius: 10px;
+    padding: 1%;
+}
+
+#envelope{
+    position: absolute;
+    width:1475px;
+    height:725px;
+
+}
+
+#envelopeRelative{
+    margin:0 auto;
+    width:1480px;
+    height:730px;
+}
+
+
+
+#plotPlace{
+    width:1200px;
+    height: 300px;
+    margin:0 auto;
+    margin-top: 50px;
+}
+
 /* slepa mapa css end */
 
 /* krizovka css begin */
