@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="sk">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="author" content="Matúš Brezovský">
+		<meta name="author" content="Ondrej Gálik">
+		<meta name="author" content="Gabriel Kerekeš">
+		<meta name="author" content="Ján Kováč">
+		<meta name="author" content="Vierka Šidová">
+
+		<title>O nás | Záverečná práca</title>
+
+		<!-- bootstrap css -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+
+		<!-- main css file -->
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+
+		<!-- jquery -->
+		<script src="js/jquery.js"></script>
+		<!-- bootstrap javascript -->		
+		<script src="js/bootstrap.min.js"></script>
+
+		<!-- menu javascript -->
+		<script src="js/menu.js"></script>
+		<!-- meniny javascript -->
+		<script src="js/meniny.js" ></script>
+		<!-- counter javascript -->
+		<script src="js/counter.js"></script>
+		<!-- breadcrumbs javascript -->
+		<script src="js/breadcrumbs.js"></script>
+
+		<script src="js/pripomienkovac.js"></script>
+	</head>
+	<body>
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+    		<!-- Brand and toggle get grouped for better mobile display -->
+    			<div class="navbar-header">
+      				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        				<span class="sr-only">Toggle navigation</span>
+        				<span class="icon-bar"></span>
+        				<span class="icon-bar"></span>
+        				<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="index.html">Záverečná práca</a>
+    			</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul id="navbar" class="nav navbar-nav">
+						
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li>
+							<form class="navbar-form navbar-right" id="meno-form">
+								<div class="form-group">
+									<input class="nsSmall form-control" type="text" id="meno" placeholder="Meno"/>
+								</div>
+								<button onclick="zobrazDatum()" type="button" class="btn btn-primary">Nájdi dátum</button>
+							</form>
+						</li>
+						<li>
+							<form class="navbar-form navbar-right" id="datum-form">
+								<div class="form-group">
+									<input class="nsSmall form-control" type="text" id="datum" placeholder="Dátum" data-toggle="popover" data-placement="bottom" data-content="Dátum musí byť vo formáte: dd.mm alebo d.m"/>
+								</div>
+								<button onclick="zobrazMeno()" type="button" class="btn btn-primary">Nájdi meno</button>
+							</form>
+						</li>		
+					</ul>
+				</div><!-- /.navbar-collapse -->
+			</div><!-- /.container-fluid -->
+		</nav>		
+
+        <div class="row">
+            <div class="col-sm-6">
+                <p id="breadcrumbs" class="no-topmargin"></p>
+            </div>
+            <div class="col-sm-6">
+                <ul id="meniny" class="pull-right">             
+                    <li>
+                        <div id="dnesnyDatum"></div>
+                    </li>
+                    <li>
+                        <div id="dnesneMeniny"></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+		<section id="tasks">	
+			<h2>Pripomienkovač</h2>
+			<hr>		
+
+			<p id="demo"></p>
+
+			<div id="divPoznamkovac">
+				<div class="btn-group">
+					<button id="bVsetky" type="button" class="btn btn-primary">Všetky poznámky</button>
+		  			<button id="bGabriel" type="button" class="btn btn-primary">Gabriel</button>
+		  			<button id="bJan" type="button" class="btn btn-primary">Ján</button>
+		  			<button id="bMatus" type="button" class="btn btn-primary">Matúš</button>
+		  			<button id="bOndrej" type="button" class="btn btn-primary">Ondrej</button>
+		  			<button id="bVierka" type="button" class="btn btn-primary">Vierka</button>
+				</div>
+				
+				<br><br>
+				
+				<ul id="ulNotes" class="list-group">  			
+				</ul>
+				
+				<div class="container">           
+					<table id="myTableData" class="table table-bordered">
+						<tbody>
+						  
+						</tbody>
+					</table>
+				</div>
+
+				<button id="bDelete" class="btn btn-default">Odstrániť označené</button>
+			</div>
+		</section>
+
+		<footer>
+			<p id="visitCounter">Počet vašich návštev: </p>
+		</footer>
+		
+		<!-- on load script -->
+		<script>
+			$(function(){
+    			bindEventToNavigation(); 
+    			vypisCookie();
+			});
+		</script>
+	</body>
+</html>

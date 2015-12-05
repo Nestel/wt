@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="sk">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Vierka Šidová">
+
+        <title>Anagramy | Záverečná práca</title>
+
+        <!-- bootstrap css -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+
+        <!-- main css file -->
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+
+        <!-- jquery -->
+        <script src="js/jquery.js"></script>
+        <!-- bootstrap javascript -->       
+        <script src="js/bootstrap.min.js"></script>
+
+        <!-- menu javascript -->
+        <script src="js/menu.js"></script>
+        <!-- meniny javascript -->
+        <script src="js/meniny.js" ></script>
+        <!-- counter javascript -->
+        <script src="js/counter.js"></script>
+        <!-- breadcrumbs javascript -->
+        <script src="js/breadcrumbs.js"></script>
+
+        <script type="text/JavaScript" src="js/DnD.js"></script>
+        <script type="text/JavaScript" src="js/plotly-latest.min.js"></script>
+        <script type="text/JavaScript" src="js/anagramy.js"></script>
+        <script src="http://code.jquery.com/ui/1.9.1/jquery-ui.js"></script>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    </head>
+    <body>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html">Záverečná práca</a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul id="navbar" class="nav navbar-nav">
+                        
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <form class="navbar-form navbar-right" id="meno-form">
+                                <div class="form-group">
+                                    <input class="nsSmall form-control" type="text" id="meno" placeholder="Meno"/>
+                                </div>
+                                <button onclick="zobrazDatum()" type="button" class="btn btn-primary">Nájdi dátum</button>
+                            </form>
+                        </li>
+                        <li>
+                            <form class="navbar-form navbar-right" id="datum-form">
+                                <div class="form-group">
+                                    <input class="nsSmall form-control" type="text" id="datum" placeholder="Dátum" data-toggle="popover" data-placement="bottom" data-content="Dátum musí byť vo formáte: dd.mm alebo d.m"/>
+                                </div>
+                                <button onclick="zobrazMeno()" type="button" class="btn btn-primary">Nájdi meno</button>
+                            </form>
+                        </li>       
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>       
+
+        <div class="row">
+            <div class="col-sm-6">
+                <p id="breadcrumbs" class="no-topmargin"></p>
+            </div>
+            <div class="col-sm-6">
+                <ul id="meniny" class="pull-right">             
+                    <li>
+                        <div id="dnesnyDatum"></div>
+                    </li>
+                    <li>
+                        <div id="dnesneMeniny"></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <section id="hra">
+            <h2>Anagramy</h2>
+            <hr>
+
+            <div class="row">
+                <div id="anagramy-hra" class="col-sm-9">
+                    <p id="showScore"></p>
+                    <br>
+
+                    <ul id="sortable"></ul>
+                    <br>
+                    <p id="napoveda"></p>
+                    <br>
+                    <p id="chyba"></p>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    
+                    <div class="col-sm-4">
+                        <button class="btn btn-primary form-control" type="button" onClick = "checkAnagram()">Skontroluj</button>
+                    </div>
+                    <div class="col-sm-4">
+                        <button class="btn btn-success form-control" type="button" onClick = "printNapoveda()">Nápoveda</button>
+                    </div>
+                    <div class="col-sm-4">
+                        <button id="btnNext" class="btn btn-danger form-control" type="button" onClick = "printAnagram(countAnagrams)">Ďalší anagram</button>
+                    </div>
+                    <br>
+                    <p id="koniecAnagramov">Prešiel si všetky anagramy, môžes si pozrieť graf.</p>
+                    <!--<br>
+                    <div class="col-sm-12">
+                        <button id="btnGraf" class="btn btn-success form-control" type="button" onClick = "printGraph()">Ukáž graf</button>
+                    </div>-->
+                </div>
+                <div id="anagramy-opis" class="col-sm-3">
+                    <p>Vitaj v hre Anagramy. Tvojou úlohou je vyriešiť tieto slovné prešmyčky, teda slová (vety), ktoré vzniknú zmenou poradia písmen v inom slove (vete). Prichystané sú slovenské aj anglické anagramy.</p>
+                    <h2>Ako hrať</h2>
+                    <p>Keď poprehadzuješ poradie písmen, ktoré bolo zadané a myslíš si, že si našiel správnu odpoveď, klikni na tlačidlo Skontroluj, ktoré ti oznámi, či bola odpoveď správna, alebo nie. Ak nevieš, klikni na tlačidlo Nápoveda, ktoré ti ukáže malú nápovedu ku každému anagramu. Po kliknutí na Skontroluj sa ti objaví tlačidlo Ďalší anagram, ktorým sa dostaneš do nového kola. Po skončení hry si môžeš pozrieť graf, ktorý znázorňuje tvoje skóre, kliknutím na tlačidlo Ukáž graf.</p>
+                    <h2>Bodovanie</h2>
+                    <p>Ak odpovieš správne bez nápovedy, získavaš 3 body. Ak odpovieš nesprávne, 3 body sa ti odpočítajú. Po otvorení nápovedy sa ti odpočíta 1 bod.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="graf">
+            <div class="row">
+                <h2>Graf vašich skóre</h2>
+                <hr class="no-margin">
+                <div id="myDiv">
+
+                </div>
+            </div>
+        </section>     
+
+        <footer>
+            <p id="visitCounter">Počet vašich návštev: </p>
+        </footer>  
+        
+        <!-- on load script -->
+        <script>
+            $(function(){
+                bindEventToNavigation(); 
+                vypisCookie();
+                init();
+            });
+        </script>
+    </body>
+</html>

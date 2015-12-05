@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- Autor suboru: Katarina Zakova -->
+<!-- Posledna aktualizacia: marec 2015 -->
+<anagramy>
+	<uloha>
+		<zadanie>minul obra</zadanie>
+		<napoveda>slovenský spisovateľ</napoveda>
+    <riesenie>Milo Urban</riesenie>
+	</uloha>
+	<uloha>
+		<zadanie>mal na hrnci obal</zadanie>
+		<napoveda>bývalý americký prezident</napoveda>
+    <riesenie>Abraham Lincoln</riesenie>       
+	</uloha>
+	<uloha>
+		<zadanie>Anna žije krásne</zadanie>
+		<napoveda>kvetina</napoveda>
+    <riesenie>snežienka jarná</riesenie>       
+	</uloha>
+	<uloha>
+		<zadanie>neskrýva sloj</zadanie>
+		<napoveda>zemepisná oblasť</napoveda>
+    <riesenie>Slovenský raj</riesenie>       
+	</uloha>  
+	<uloha>
+		<zadanie>koka a aké lsd</zadanie>
+		<napoveda>nápoj</napoveda>
+    <riesenie>sladké kakao</riesenie>       
+	</uloha>    
+	<uloha>
+		<zadanie>ospalý Tito</zadanie>
+		<napoveda>slovenský politik</napoveda>
+    <riesenie>opitý Slota</riesenie>       
+	</uloha> 
+	<uloha>
+		<zadanie>Dirty Room</zadanie>
+		<napoveda>ubytovanie pre studentov</napoveda>
+    <riesenie>Dormitory</riesenie>       
+	</uloha> 
+	<uloha>
+		<zadanie>School master</zadanie>
+		<napoveda>miestnost kde sa uci</napoveda>
+    <riesenie>The classroom</riesenie>  
+	</uloha> 
+	<uloha>
+		<zadanie>Eleven plus two</zadanie>
+		<napoveda>... sa rovna ...</napoveda>
+    <riesenie>Twelve plus one</riesenie>  
+	</uloha>
+	<uloha>
+		<zadanie>Here come dots</zadanie>
+		<napoveda>bodky, ciarky</napoveda>
+    <riesenie>The Morse code</riesenie>  
+	</uloha>
+	<uloha>
+		<zadanie>They see</zadanie>
+		<napoveda>vidia</napoveda>
+    <riesenie>The eyes</riesenie> 
+	</uloha> 
+	<uloha>
+		<zadanie>He has that geometry proof</zadanie>
+		<napoveda>zaklad geometrie</napoveda>
+    <riesenie>The theorem of Pythagoras</riesenie> 
+	</uloha> 
+	<uloha>
+		<zadanie>Old West action</zadanie>
+		<napoveda>kovboj</napoveda>
+    <riesenie>Clint Eastwood</riesenie>  
+	</uloha>
+	<uloha>
+		<zadanie>Elegant man</zadanie>
+		<napoveda>elegantny muz</napoveda>
+    <riesenie>A gentleman</riesenie>  
+	</uloha>
+	<uloha>
+		<zadanie>No city dust here</zadanie>
+		<napoveda>nie je tu mestsky prach</napoveda>
+    <riesenie>The country side</riesenie>      
+	</uloha>
+	<uloha>
+		<zadanie>Detect thieves</zadanie>
+		<napoveda>hladaju zlodejov</napoveda>
+    <riesenie>The Detectives</riesenie>      
+	</uloha> 
+</anagramy>

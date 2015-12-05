@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="sk">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Matúš Brezovský">
+
+        <title>Puzzle | Záverečná práca</title>
+
+        <!-- bootstrap css -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+
+        <!-- main css file -->
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+
+        <!-- jquery -->
+        <script src="js/jquery.js"></script>
+        <!-- bootstrap javascript -->       
+        <script src="js/bootstrap.min.js"></script>
+
+        <!-- menu javascript -->
+        <script src="js/menu.js"></script>
+        <!-- meniny javascript -->
+        <script src="js/meniny.js" ></script>
+        <!-- counter javascript -->
+        <script src="js/counter.js"></script>
+        <!-- breadcrumbs javascript -->
+        <script src="js/breadcrumbs.js"></script>
+
+        <!-- pamiatky script -->
+        <script src="js/mapaPamiatky.js"></script>
+        <script src="js/pamiatky.js"></script>
+       
+        <link rel="stylesheet" href="css/jquery-ui.css">
+        <link rel="stylesheet" href="css/style.css">
+
+        <!--<script src="jquery.js"></script>-->
+        <script src="js/jquery-ui.js"></script>
+        <script src="js/puzzle.js"></script> 
+        <script src="js/puzzleCookies.js"></script>
+        <script src="js/plotly-latest.min.js"></script> 
+
+    </head>
+    <body>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html">Záverečná práca</a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul id="navbar" class="nav navbar-nav">
+                        
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <form class="navbar-form navbar-right" id="meno-form">
+                                <div class="form-group">
+                                    <input class="nsSmall form-control" type="text" id="meno" placeholder="Meno"/>
+                                </div>
+                                <button onclick="zobrazDatum()" type="button" class="btn btn-primary">Nájdi dátum</button>
+                            </form>
+                        </li>
+                        <li>
+                            <form class="navbar-form navbar-right" id="datum-form">
+                                <div class="form-group">
+                                    <input class="nsSmall form-control" type="text" id="datum" placeholder="Dátum" data-toggle="popover" data-placement="bottom" data-content="Dátum musí byť vo formáte: dd.mm alebo d.m"/>
+                                </div>
+                                <button onclick="zobrazMeno()" type="button" class="btn btn-primary">Nájdi meno</button>
+                            </form>
+                        </li>       
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>              
+
+        <div class="row">
+            <div class="col-sm-6">
+                <p id="breadcrumbs" class="no-topmargin"></p>
+            </div>
+            <div class="col-sm-6">
+                <ul id="meniny" class="pull-right">             
+                    <li>
+                        <div id="dnesnyDatum"></div>
+                    </li>
+                    <li>
+                        <div id="dnesneMeniny"></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <section id="puzzle-hra">
+            <h2>Puzzle</h2>
+            <hr>
+            <div class="row">        
+                <div id="individualneZadanie1" class="col-sm-6">
+                    <div id="divMapa">
+                      	<img src="img/SVK.png" id="imgSVK" alt="Slovensko">  
+
+                      	<div id="divBA" class="drop"></div>
+                      	<div id="divTT" class="drop"></div>
+                      	<div id="divNR" class="drop"></div>
+                      	<div id="divTN" class="drop"></div>
+                      	<div id="divBB" class="drop"></div>
+                      	<div id="divZA" class="drop"></div>
+                      	<div id="divPO" class="drop"></div>
+                      	<div id="divKE" class="drop"></div>
+                    </div>
+
+                    <script>
+                    	var totalScore = 0;
+                    	var droppedRegions = 0;
+                    </script>
+                </div>
+
+                <div class="col-sm-6">
+                    <div id="divPuzzle">
+                        <div class="row">
+                            <img src="img/TT.png" id="imgTT" class="drag" alt="Trnava">
+                            <img src="img/PO.png" id="imgPO" class="drag" alt="Prešov">
+                            <img src="img/ZA.png" id="imgZA" class="drag" alt="Žilina">>
+                            <img src="img/BB.png" id="imgBB" class="drag" alt="Banská Bystrica">>
+                        </div>
+                        <div class="row">
+                            <img src="img/BA.png" id="imgBA" class="drag" alt="Bratislava">
+                            <img src="img/TN.png" id="imgTN" class="drag" alt="Trenčín">>
+                            <img src="img/NR.png" id="imgNR" class="drag" alt="Nitra">>
+                            <img src="img/KE.png" id="imgKE" class="drag" alt="Košice">>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div id="divScore" class="col-sm-12">
+                    <div id="youWon" class="alert alert-success inDivScore">
+                        <strong>Vyhrali ste!</strong>
+                    </div>
+
+                    <p id="pScore">Aktuálny počet bodov: 0</p>
+
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <button id="bNovaHra" class="inDivScore btn btn-primary form-control">Nová hra</button><br>
+                        </div>
+                        <div class="col-sm-4">
+                            <button class="inDivScore btn btn-success form-control" data-toggle="popover" data-placement="top" data-content="Hra je ako klasické puzzle. Pomocou myši uchopte kraj slovenska a snažte sa ho umiestniť na správne miesto na mape slovenska. Ak budete blízko správneho miesta, kraj sa sám prichytí. Hra končí ak na mapu umiestnite všetkých 8 krajov.">Nápoveda</button><br>
+                        </div>
+                        <div class="col-sm-4">
+                            <button id="bBodovanie" class="inDivScore btn btn-danger form-control" data-toggle="popover" data-placement="top" data-content="Ak vybraný kraj umiestnite na správne miesto na prvý krát, dostanete 1 bod. Ak kraj umiestnite na druhý krát dostanete 0,5 bodu. Inak nezískate žiaden bod. Maximálny počet bodov je 8, minimálny 0.">Bodovanie</button><br>
+                        </div>
+                    </div>
+
+                    <!-- <button id="bZobrazitGraf" class="inDivScore">Zobraziť históriu výsledkov</button> -->
+                </div>
+            </div>
+        </section>
+
+        <section id="graf">
+            <div class="row">
+                <h2>Graf vašich skóre</h2>
+                <hr class="no-margin">
+                <div id="myDiv">
+
+                </div>
+            </div>
+        </section>   
+
+        <!-- on load script -->
+        <script>
+            $(function(){
+                bindEventToNavigation(); 
+                vypisCookie();
+            });
+        </script>
+
+        <script>
+            $(window).resize(function(){
+                $("#divMapa").height($("#divPuzzle").height());
+            });
+        </script>
+    </body>
+</html>
