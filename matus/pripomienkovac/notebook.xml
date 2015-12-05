@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<poznamkovac>
+
+	<poznamka>
+		<text>Návrh grafického dizajnu</text>
+		<riesitel>Gabriel</riesitel>
+		<dokoncena>false</dokoncena>
+	</poznamka>
+	<poznamka>
+		<text>Dynamicky generované trojúrovňové menu</text>
+		<riesitel>Gabriel</riesitel>
+		<dokoncena>false</dokoncena>
+	</poznamka>
+	<poznamka>
+		<text>Zobrazenie aktuálneho dátumu s meninami v daný deň</text>
+		<riesitel>Ján</riesitel>
+		<dokoncena>false</dokoncena>
+	</poznamka>
+	<poznamka>
+		<text>Vytvorenie pripomienkovača osobných úloh</text>
+		<riesitel>Matúš</riesitel>
+		<dokoncena>false</dokoncena>
+	</poznamka>
+	<poznamka>
+		<text>Počítadlo osobných prístupov na stránku</text>
+		<riesitel>Vierka</riesitel>
+		<dokoncena>false</dokoncena>
+	</poznamka>
+	<poznamka>
+		<text>História prehliadania vo forme path-based breadcrumbs</text>
+		<riesitel>Vierka</riesitel>
+		<dokoncena>false</dokoncena>
+	</poznamka>
+	<poznamka>
+		<text>Mapa Slovenska s markermi ukazujúcimi na spracované technické pamiatky</text>
+		<riesitel>Ondrej</riesitel>
+		<dokoncena>false</dokoncena>
+	</poznamka>
+	<poznamka>
+		<text>Zobrazenie časovej osi vzniku spracovaných technických pamiatok</text>
+		<riesitel>Gabriel</riesitel>
+		<dokoncena>false</dokoncena>
+	</poznamka>
+	<poznamka>
+		<text>Individuálna úloha 1 - Zemepisné puzzle</text>
+		<riesitel>Matúš</riesitel>
+		<dokoncena>false</dokoncena>
+	</poznamka>
+	<poznamka>
+		<text>Individuálna úloha 2 - Slepá mapa</text>
+		<riesitel>Ondrej</riesitel>
+		<dokoncena>false</dokoncena>
+	</poznamka>
+	<poznamka>
+		<text>Individuálna úloha 3 - Sudoku</text>
+		<riesitel>Gabriel</riesitel>
+		<dokoncena>false</dokoncena>
+	</poznamka>
+	<poznamka>
+		<text>Individuálna úloha 4 - Anagramy</text>
+		<riesitel>Vierka</riesitel>
+		<dokoncena>false</dokoncena>
+	</poznamka>
+	<poznamka>
+		<text>Individuálna úloha 5  Krížovka</text>
+		<riesitel>Ján</riesitel>
+		<dokoncena>false</dokoncena>
+	</poznamka>
+
+
+</poznamkovac>
+
