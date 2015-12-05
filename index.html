@@ -30,6 +30,8 @@
 		<!-- pamiatky script -->
 		<script src="js/mapaPamiatky.js"></script>
 		<script src="js/pamiatky.js"></script>
+		<!-- graphs -->
+		<script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
 	</head>
 	<body>
 		<nav class="navbar navbar-default">
@@ -261,6 +263,12 @@
 				    </div>
 				</div>
 			</div>
+			<div class="row">
+				<div class="col-sm-12">						
+					<div id="graph">
+					</div>
+				</div>
+			</div>
 		</section>
 
 		<footer>
@@ -278,6 +286,8 @@
 		<!-- on window resize script -->
 		<script>
 			$(window).resize(function(){
+				resizePamiatky();
+				mapsInitialize();
 			});
 		</script>
 	</body>
