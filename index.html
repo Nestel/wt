@@ -2,9 +2,13 @@
 <html lang="sk">
 	<head>
 		<meta charset="UTF-8">
+		<meta name="author" content="Matúš Brezovský">
+		<meta name="author" content="Ondrej Gálik">
 		<meta name="author" content="Gabriel Kerekeš">
+		<meta name="author" content="Ján Kováč">
+		<meta name="author" content="Vierka Šidová">
 
-		<title>Záverečná práca | EliteGroup</title>
+		<title>Pamiatky | Záverečná práca</title>
 
 		<!-- bootstrap css -->
 		<link rel="stylesheet" href="css/bootstrap.min.css">
@@ -21,15 +25,17 @@
 
 		<!-- menu javascript -->
 		<script src="js/menu.js"></script>
-		<!-- meniny javascript-->
+		<!-- meniny javascript -->
 		<script src="js/meniny.js" ></script>
-
+		<!-- counter javascript -->
 		<script src="js/counter.js"></script>
+		<!-- breadcrumbs javascript -->
 		<script src="js/breadcrumbs.js"></script>
 
 		<!-- pamiatky script -->
 		<script src="js/mapaPamiatky.js"></script>
 		<script src="js/pamiatky.js"></script>
+        <script src="js/jquery-ui.js"></script>
 		<!-- graphs -->
 		<script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
 	</head>
@@ -44,7 +50,7 @@
         				<span class="icon-bar"></span>
         				<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="/zp/">Záverečná práca</a>
+					<a class="navbar-brand" href="index.html">Záverečná práca</a>
     			</div>
 
 				<!-- Collect the nav links, forms, and other content for toggling -->
@@ -54,7 +60,7 @@
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
 						<li>
-							<form submit="return false" class="navbar-form navbar-right" role="searchName" id="meno-form">
+							<form class="navbar-form navbar-right" id="meno-form">
 								<div class="form-group">
 									<input class="nsSmall form-control" type="text" id="meno" placeholder="Meno"/>
 								</div>
@@ -62,9 +68,9 @@
 							</form>
 						</li>
 						<li>
-							<form submit="return false;" class="navbar-form navbar-right" role="searchDate">
+							<form class="navbar-form navbar-right" id="datum-form">
 								<div class="form-group">
-									<input class="nsSmall form-control" type="text" id="datum" placeholder="Dátum"/>
+									<input class="nsSmall form-control" type="text" id="datum" placeholder="Dátum" data-toggle="popover" data-placement="bottom" data-content="Dátum musí byť vo formáte: dd.mm alebo d.m"/>
 								</div>
 								<button onclick="zobrazMeno()" type="button" class="btn btn-primary">Nájdi meno</button>
 							</form>
@@ -100,7 +106,7 @@
 					<div class="pamiatka lightblue">
 						<h3>Bratislava - Starý most Františka Jozefa I.</h3>
 						<hr>
-						<img src="img/stary_most.jpg">
+						<img src="img/stary_most.jpg" alt="Starý most Františka Jozefa I.">
 						<p>
 							Starý most Františka Jozefa I. bol prvým železným mostom, ktorý spojil Petržalku s Bratislavou.
 							O jeho výstavbe rozhodli poslanci 9. apríla 1877. Následne ju schválila uhorská vláda a Bratislava. 
@@ -120,7 +126,7 @@
 					<div class="pamiatka darkblue">
 						<h3>Skalnaté pleso - hvezdáreň</h3>
 						<hr>
-						<img src="img/skalnate_pleso.jpg">
+						<img src="img/skalnate_pleso.jpg" alt="Skalnaté pleso - hvezdáreň">
 						<p>
 							Astronomické observatórium Skalnaté Pleso sa nachádza neďaleko Skalnatého plesa v nadmorskej výške 1 786 nad hladinou mora. 
 							Observatórium bolo založené v roku 1943 keď boli vykonané jeho prvé pozorovania. 
@@ -138,7 +144,7 @@
 					<div class="pamiatka darkblue">
 						<h3>Kráľová pri Senci - most</h3>
 						<hr>
-						<img src="img/kralova_pri_senci_most.jpg">
+						<img src="img/kralova_pri_senci_most.jpg" alt="Kráľová pri Senci - most">
 						<p>
 							Kamenný most, ktorý sa vypína nad Čiernou vodou od svojho vzniku plnil funkciu parkového mosta, ktorý v období pálffyovského domínia spájal ozdobnú francúzsku záhradu plnú kvetov, fontán a sôch s tzv. anglickým parkom. Most pripomína barokovú stavbu z 18. storočia, nKamenný most v barokovom štýle, Kráľová pri Sencio pravdepodobne bol postavený až v roku 1904, hoci v Ústrednom zozname pamiatkového fondu je most evidovaný ako baroková pamiatka. Do roku 1900 stál poniže kaštieľa drevený most, ktorý dal Ján Pálffy strhnúť, no nie je vylúčené, že tu voľakedy stál aj starší, kamenný most. Terajší trojklembový most vznikol na návrh Ing. Jána Nagymihálya z roku 1903 a o rok neskôr ho postavili talianski stavitelia a kamenári. Most, ktorý v sebe zahrňa prvky secesného slohu zo začiatku 20. storočia má betónový skelet a po bokoch je vyplnený červenou tehlou. Je dlhý 42 metrov a klenutá vozovka má šírku 4,80 m. Kamenári osadili nad obvodovou rímsou kamennú balustrádu. V súčasnosti dostal most novú dlažbu, jeho značne poškodený zovňajšok sa už reštauruje.
 						</p>
@@ -149,7 +155,7 @@
 					<div class="pamiatka lightblue">
 						<h3>Bojnice - hradná studňa</h3>
 						<hr>
-						<img src="img/bojnice_hradna_studna.jpg">
+						<img src="img/bojnice_hradna_studna.jpg" alt="Bojnice - hradná studňa">
 						<p>
 							Bojnická studňa bez vody
 							Záhadou je aj studňa Bojnického zámku, o ktorej sa hovorí, že v nej nikdy nebola žiadna voda. Na dne leží obrovský balvan, ktorý podľa povestí zatarasuje vchod do tajnej katakomby. Ťažko povedať, aká je pravda, pretože kameňom nikto ešte nepohol a nezistil, ako to s údajnými katakombami je. 
@@ -169,7 +175,7 @@
 					<div class="pamiatka lightblue">
 						<h3>Hlohovec - zámok</h3>
 						<hr>
-						<img src="img/hlohovec_zamok.jpg">
+						<img src="img/hlohovec_zamok.jpg" alt="Hlohovec - zámok">
 						<p>
 							Pôvodný stredoveký hrad bol postavený v 11. storočí a prvýkrát sa spomína v tzv. zoborskej listine. V roku 1275 kráľ Ladislav IV. daroval hrad prvému feudálnemu vlastníkovi z rodu Abovcov. Odvtedy, s malými prestávkami, patril aj s okolitými pozemkami až do roku 1945 mocným feudálnym rodom. Na hlohovskom hrade sídlili rody Ujlakiovcov, Turzovcov, Forgáčovcov a Erdődyovcov. Práve Erdődyovci hrad prestavali na pohodlné panské sídlo a obývali ho až do roku 1945, kedy sa do mesta dostali sovietske vojská. Vtedy bola na zámku zriadená nemocnica pre sovietskych vojakov. Po ich odchode sídlila v priestoroch zámku určitý čas posádka česko-slovenskej armády. Od roku 1951 boli na hlohovskom zámku obývacie priestory a učebne výchovného ústavu pre mládež.
 							V posledných rokoch na zámku nesídli nikto a patrí mestu Hlohovec. Plán Aristokratického združenia Slovenska (AZS), kúpiť zámok a zreštaurovať ho, nevyšiel. Dnes chce mesto chátrajúci objekt zachrániť pod vlastnou taktovkou. V októbri poslanci jednohlasne schválili aj päťpercentnú účasť mesta na tomto zámere, čo je vyše 124 tisíc EUR. Požadovaná čiastka nepokrýva opravu celého zámku. Momentálne sa počíta s rekonštrukciou asi tretiny interiéru a opravou krovu. Vynoviť by sa mala aj strecha s komínmi. V budúcnosti by mala pamiatka slúžiť verejnosti. Jedným zo zámerov je napríklad zriadenie múzea stredovekej justície. Do zámku by sa mali vrátiť aj vzácne historické predmety z depozitárov Vlastivedného múzea v Hlohovci a hradu Červený Kameň.
@@ -181,7 +187,7 @@
 					<div class="pamiatka darkblue">
 						<h3>Hurbanovo - hvezdáreň</h3>
 						<hr>
-						<img src="img/hurbanovo_hvezdaren.jpg">
+						<img src="img/hurbanovo_hvezdaren.jpg" alt="Hurbanovo - hvezdáreň">
 						<p>
 							Mesto Hurbanovo preslávila, okrem populárneho piva Zlatý bažant, najmä najstaršia slovenská hvezdáreň, ktorej história siaha až do roku 1871. V historickom parku v centre Hurbanova na juhu Slovenska sa nachádza najstaršia a najznámejšia slovenská hvezdáreň. Jej história siaha až do roku 1871. Veľké zásluhy na jej vzniku mal miestny rodák Dr. Mikuláš Konkoly-Thege, ktorý celý svoj majetok, dom, záhradu a všetko zariadenie observatória venoval v roku 1899 štátu. Dnes sa pracovníci hvezdárne v Hurbanove venujú výskumu aj výchovno-vzdelávacej činnosti. Hvezdáreň je prístupná verejnosti, a to nielen cez deň, ale aj večer s atraktívnym pozorovaním nočnej oblohy.
 						</p>
@@ -194,7 +200,7 @@
 					<div class="pamiatka darkblue">
 						<h3>Bratislava - muničný sklad</h3>
 						<hr>
-						<img src="img/bratislava_municny_sklad.jpg">
+						<img src="img/bratislava_municny_sklad.jpg" alt="Bratislava - muničný sklad">
 						<p>
 							Budova bývalého muničného skladu  je zapísaná v ústrednom zozname kultúrnych pamiatok pod číslom   820. Budova vznikla v roku 1892 v zaniknutom Kramerovom kameňolome, ktorý sa nachádzal v širšom priestore Mlynskej doliny v Bratislave. Budova sa zachovala takmer v neporušenom stave. Spolu s vydrickými mlynmi  dokumentuje najstaršiu priemyselnú zónu v Bratislave . Je to jediná technická pamiatka tohto druhu na Slovensku. Od roku 2001 sme realizovali čiastkové práce na zlepšenie stavebno-technického stavu objektu. Bol zrealizovaný odvodňovací systém okolia objektu, v roku 2002 po verejnej súťaži začala sanácia krovu a s výmenou strešnej krytiny, ktorá bola dokončená v roku 2005. V roku 2005 po verejnej súťaži začali stavebné práce na II. etape -  obnove vlastného objektu, ktoré pokračovali v roku 2006. V roku 2007 boli práce na dokončení obnovy zastavené pre nedostatok finančných prostriedkov. Táto časť obnovy vrátane fasády a úpravy okolia bola dokončená v roku 2008.    
 						</p>
@@ -205,7 +211,7 @@
 					<div class="pamiatka lightblue">
 						<h3>Bratislava - cvernovka</h3>
 						<hr>
-						<img src="img/bratislava_cvernovka.jpg">
+						<img src="img/bratislava_cvernovka.jpg" alt="Bratislava - cvernovka">
 						<p>
 							Cvernovka je ľudový názov továrne na nite a niťové produkty v bratislavskej mestskej časti Ružinov. Oficiálne názvy továrne boli: Bratislavská cvernová továreň (1900 – 1957), Závody Medzinárodného dňa žien, š.p. (1957 – 1990), BCT – Bratislavská cvernová továreň, akciová spoločnosť (od roku 1991).
 
@@ -223,7 +229,7 @@
 					<div class="pamiatka lightblue">
 						<h3>Betliar - kaštieľ s areálom</h3>
 						<hr>
-						<img src="img/betliar_kastiel_s_arealom.png">
+						<img src="img/betliar_kastiel_s_arealom.png" alt="Betliar - kaštieľ s areálom">
 						<p>
 							Prírodný park s rozlohou 57 hektárov je súčasťou areálu kaštieľa Betliar, do ktorého patria okrem budovy samotného kaštieľa aj objekty drobnej parkovej architektúry, plastiky, bývalé hospodárske budovy a obytné domy patriace pôvodne k panskému majetku.  Park pri kaštieli bol založený v rokoch 1792 – 1795 vďaka iniciatíve Leopolda Andrássyho. Za zakladateľa parku sa považuje významný záhradník empírovej doby francúzskeho pôvodu Henrich Nebbien. Od roku 1978 je betliarsky park zaradený do zoznamu umelecky a kultúrne hodnotných parkov sveta, ktoré eviduje UNESCO. V parku sa nachádza aj japonský most ktorý vidíte na obrázku. Bol zhotovený v 2.polovici 19.storočia.
 						</p>
@@ -234,7 +240,7 @@
 					<div class="pamiatka darkblue">
 						<h3>Košice - stará sladovňa</h3>
 						<hr>
-						<img src="img/kosice_stara_sladovna.png">
+						<img src="img/kosice_stara_sladovna.png" alt="Košice - stará sladovňa">
 						<p>
 							Nová éra košického pivovarníctva je spojená s menami dvoch podnikateľov: Jozef Bayer a Jozef Lepesch. Pivovarník Bayer prvýkrát v histórii košického pivovarníctva platil mestu v naturáliách za povolenie variť pivo. Ročný naturálny poplatok bol 79 hektolitrov piva. V roku 1870 si Bayer postavil pivovar na Floriánskej ulici. Košické pivovarníctvo takto urobilo prvý rozhodný krok do spomenutej novej éry varenia piva. Neďaleko pivovaru začala vyrábať slad nová sladovňa.
 						</p>
@@ -250,12 +256,12 @@
 			<h2>Mapy pamiatok</h2>
 			<hr>
 			<div class="row text-center">
-				<div class="col-sm-5">
+				<div id="google-map-wrapper" class="col-sm-5">
 					<h3>Pamiatky na Google mape</h3>
 					<hr>
 					<div id="google-map"></div>
 				</div>
-			    <div class="col-sm-7">
+			    <div id="image-map-wrapper" class="col-sm-7">
 					<h3>Pamiatky na obrázkovej mape</h3>
 					<hr>
 			    	<div id="image-map-div" class="global-center">
@@ -263,7 +269,7 @@
 				    </div>
 				</div>
 			</div>
-			<div class="row">
+			<div id="pamiatky-timeline-wrapper" class="row">
 				<div class="col-sm-12">						
 					<div id="graph">
 					</div>

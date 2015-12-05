@@ -10,7 +10,7 @@ var marker = new google.maps.Marker({
                 title: ''
                 });
 var score = 0;
-var SCORES_COOKIE_NAME = "playerScore";
+var SCORES_COOKIE_NAME = "playerScoreEuropa";
 
 // Citanie XML suboru, a naplnenie do pola
 var xhttp = new XMLHttpRequest();
@@ -225,11 +225,11 @@ function cityCompare(searched, correct){
     var returnVariable = false;
     var tmp="";
     var input = toUTF8(searched);
-    console.log("-"+input+"-");
+    //console.log("-"+input+"-");
 
     for(i=0; i<correct.length; i++){
         tmp = toUTF8(correct[i]);
-        console.log(tmp);
+        //console.log(tmp);
         if (input.localeCompare(tmp) == 0){
             returnVariable = true;
         }
@@ -288,7 +288,7 @@ function scoresToInt(scores)
  
 function getAllScores()
 {
-        var scoresCookie = getCookie(SCORES_COOKIE_NAME);
+        var scoresCookie = getGameCookie(SCORES_COOKIE_NAME);
  
         //split the cookie
         //scoresCookie[0] is cookie name
@@ -298,29 +298,32 @@ function getAllScores()
         return scores;
 }
  
-function getCookie(name)
+function getGameCookie(name)
 {
-        //get all current cookies
-        var allCookies = document.cookie;
-        //split the cookies into an array with ; as the delimiter
-        var allCookiesArray = allCookies.split(";");
- 
-        var searchedCookie;
-        //iterate through the cookies array
-        for (var i = 0; i < allCookiesArray.length; i++)
-        {      
-                //if the currently iterated cookies name is sudokuScores
-                if (allCookiesArray[i].indexOf(name) > -1)
-                {
-                        //set currentCookies to only the sudokuScores cookie
-                        searchedCookie = allCookiesArray[i];
-                        break;
-                }
-        }
-        if (searchedCookie == undefined) {
-            searchedCookie = name +"=";
-        }
-        return searchedCookie;
+    //get all current cookies
+    var allCookies = document.cookie;
+    //split the cookies into an array with ; as the delimiter
+    var allCookiesArray = allCookies.split(";");
+
+    var searchedCookie;
+    //iterate through the cookies array
+    for (var i = 0; i < allCookiesArray.length; i++)
+    {      
+            //if the currently iterated cookies name is sudokuScores
+            if (allCookiesArray[i].indexOf(name) > -1)
+            {
+                    //set currentCookies to only the sudokuScores cookie
+                    searchedCookie = allCookiesArray[i];
+                    break;
+            }
+    }
+
+    if (searchedCookie == undefined)
+    {
+        searchedCookie = name + "=";
+    }
+        
+    return searchedCookie;
 }
  
 function printScoresGraph(){
@@ -328,7 +331,7 @@ function printScoresGraph(){
        
         scores = scoresToInt(scores);
 
-        console.log(scores);
+        //console.log(scores);
  
         var trace = {
                 x: scores.length,

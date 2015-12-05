@@ -2,17 +2,19 @@
 <html lang="sk">
 	<head>
 		<meta charset="UTF-8">
+		<meta name="author" content="Matúš Brezovský">
+		<meta name="author" content="Ondrej Gálik">
 		<meta name="author" content="Gabriel Kerekeš">
+		<meta name="author" content="Ján Kováč">
+		<meta name="author" content="Vierka Šidová">
 
-		<title>Záverečná práca | EliteGroup</title>
+		<title>O nás | Záverečná práca</title>
 
 		<!-- bootstrap css -->
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 
 		<!-- main css file -->
 		<link rel="stylesheet" type="text/css" href="css/style.css">
-    	
-    	<script src="https://maps.googleapis.com/maps/api/js"></script>
 
 		<!-- jquery -->
 		<script src="js/jquery.js"></script>
@@ -21,15 +23,12 @@
 
 		<!-- menu javascript -->
 		<script src="js/menu.js"></script>
-		<!-- meniny javascript-->
+		<!-- meniny javascript -->
 		<script src="js/meniny.js" ></script>
-
+		<!-- counter javascript -->
 		<script src="js/counter.js"></script>
+		<!-- breadcrumbs javascript -->
 		<script src="js/breadcrumbs.js"></script>
-
-		<!-- pamiatky script -->
-		<script src="js/mapaPamiatky.js"></script>
-		<script src="js/pamiatky.js"></script>
 	</head>
 	<body>
 		<nav class="navbar navbar-default">
@@ -42,7 +41,7 @@
         				<span class="icon-bar"></span>
         				<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="/zp/">Záverečná práca</a>
+					<a class="navbar-brand" href="index.html">Záverečná práca</a>
     			</div>
 
 				<!-- Collect the nav links, forms, and other content for toggling -->
@@ -52,7 +51,7 @@
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
 						<li>
-							<form submit="return false" class="navbar-form navbar-right" role="searchName" id="meno-form">
+							<form class="navbar-form navbar-right" id="meno-form">
 								<div class="form-group">
 									<input class="nsSmall form-control" type="text" id="meno" placeholder="Meno"/>
 								</div>
@@ -60,9 +59,9 @@
 							</form>
 						</li>
 						<li>
-							<form submit="return false;" class="navbar-form navbar-right" role="searchDate">
+							<form class="navbar-form navbar-right" id="datum-form">
 								<div class="form-group">
-									<input class="nsSmall form-control" type="text" id="datum" placeholder="Dátum"/>
+									<input class="nsSmall form-control" type="text" id="datum" placeholder="Dátum" data-toggle="popover" data-placement="bottom" data-content="Dátum musí byť vo formáte: dd.mm alebo d.m"/>
 								</div>
 								<button onclick="zobrazMeno()" type="button" class="btn btn-primary">Nájdi meno</button>
 							</form>
@@ -97,7 +96,7 @@
 					<div class="person lightblue">
 						<h3>
 							Matúš Brezovský
-							<img src="img/matus_brezovsky.jpg">
+							<img src="img/matus_brezovsky.jpg" alt="Matúš Brezovský">
 						</h3>
 						<address>
 							<a href="mailto:xbrezovsky@stuba.sk">xbrezovsky@stuba.sk</a>
@@ -108,7 +107,7 @@
 					<div class="person lightblue">
 						<h3>
 							Ondrej Gálik
-							<img src="img/ondrej_galik.jpg">
+							<img src="img/ondrej_galik.jpg" alt="Ondrej Gálik">
 						</h3>
 						<address>
 							<a href="mailto:xgaliko@stuba.sk">xgaliko@stuba.sk</a>
@@ -119,7 +118,7 @@
 					<div class="person lightblue">
 						<h3>
 							Gabriel Kerekeš
-							<img src="img/gabriel_kerekes.jpg">
+							<img src="img/gabriel_kerekes.jpg" alt="Gabriel Kerekeš">
 						</h3>
 						<address>
 							<a href="mailto:xkerekesg@stuba.sk">xkerekesg@stuba.sk</a>
@@ -132,7 +131,7 @@
 					<div class="person lightblue">
 						<h3>
 							Ján Kováč
-							<img src="img/jan_kovac.jpg">
+							<img src="img/jan_kovac.jpg" alt="Ján Kováč">
 						</h3>
 						<address>
 							<a href="mailto:xkovacj1@stuba.sk">xkovacj1@stuba.sk</a>
@@ -143,7 +142,7 @@
 					<div class="person lightblue">
 						<h3>
 							Vierka Šidová
-							<img src="img/vierka_sidova.jpg">
+							<img src="img/vierka_sidova.jpg" alt="Vierka Šidová">
 						</h3>
 						<address>
 							<a href="mailto:xsidovav@stuba.sk">xsidovav@stuba.sk</a>

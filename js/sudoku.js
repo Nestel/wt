@@ -15,7 +15,7 @@ var cachedNotes = [];
 
 var sudokuXhttp;
 var SUDOKU_REQUEST_METHOD = 'GET';
-var SUDOKU_FILE_PATH = 'js/sudoku.xml';
+var SUDOKU_FILE_PATH = 'xml/sudoku.xml';
 var sudokuXmlLoaded = false;
 
 var sudokuForm;
@@ -132,7 +132,7 @@ function scoresToInt(scores)
 
 function getAllScores()
 {
-	var scoresCookie = getCookie(SCORES_COOKIE_NAME);
+	var scoresCookie = getGameCookie(SCORES_COOKIE_NAME);
 
 	//split the cookie
 	//scoresCookie[0] is cookie name
@@ -142,7 +142,7 @@ function getAllScores()
 	return scores;
 }
 
-function getCookie(name)
+function getGameCookie(name)
 {
 	//get all current cookies
 	var allCookies = document.cookie;
@@ -163,9 +163,9 @@ function getCookie(name)
 	}
 
 	if (searchedCookie == undefined)
-	{
-		searchedCookie += document.cookie = SCORES_COOKIE_NAME + "=" + 0 + ",;";
-	}
+    {
+        searchedCookie = name + "=";
+    }
 
 	return searchedCookie;
 }
@@ -251,6 +251,7 @@ function handleFinish()
 	alert("CONGRATULATIONS!!! YOUR FINAL SCORE: " + sudokuScore);
 	saveScoreToCookie();
 	printScoresGraph();
+	$("#new-sudoku-game").show();
 }
 
 function checkSudokuFinished()
@@ -277,5 +278,7 @@ $(function(){
 
 	initField();
 
-	printScoresGraph();
+	$("#new-sudoku-game").click(function(){
+		generateGame();
+	});
 });

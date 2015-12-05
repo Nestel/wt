@@ -18,6 +18,7 @@ var menu = [{value: "Pamiatky", link: "index.html"},
 					value: "Sudoku", link: "sudoku.html"
 				}]}
 			]},
+			{value: "Pripomienkovač", link: "pripomienkovac.html"},
 			{value: "O nás", link: "about.html"}];
 
 var navbar;

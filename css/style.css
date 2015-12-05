@@ -11,6 +11,20 @@ section
     margin-bottom: 40px;
 }
 
+footer
+{
+    width: 100%;
+    text-align: center;
+    background-color: #3088A6;
+    padding: 20px;
+    padding-top: 25px;
+}
+
+footer p
+{
+    color: white;
+}
+
 .no-margin
 {
     margin: 0;
@@ -39,6 +53,16 @@ section
 .lightblue
 {
     background-color: rgba(115, 201, 230, 0.3);
+}
+
+#datum + .popover, #datum + .popover .popover-content
+{
+    background-color: #f2dede;
+}
+
+#datum + .popover .arrow
+{
+    display: none;
 }
 
 .pamiatka
@@ -196,6 +220,12 @@ input.noted
 {
 	background-color: #8EFC88;
 	border: 1px solid black;
+}
+
+#new-sudoku-game
+{
+    margin-top: 40px;
+    display: none;
 }
 
 .no-margin
@@ -501,14 +531,14 @@ table#ttt tr th, table#ttt tr td {
 
 .krizovka {
     border: 1px solid black;
-    background-color: none;
+    background-color: rgba(0,0,0,0);
     width: 40px;
     height: 40px;
 }
 
 .prazdnaBunka {
     border: none;
-    background-color: none;
+    background-color: rgba(0,0,0,0);
 }
 
 #x
@@ -532,7 +562,7 @@ table#ttt tr th, table#ttt tr td {
 }
 
 .ziadne {
-    background-color:none;
+    background-color: rgba(0,0,0,0);
 }
 /* krizovka css end */
 
@@ -791,6 +821,26 @@ img.pamiatka-clicked
 }
 /* GRAPH CSS END */
 
+/*pripomienkovac css begin */
+
+
+#c1{
+    font-size: 10px;
+    max-width: 400px;
+
+    position: absolute;
+    left: 0px;
+}
+
+#sel1{
+    max-width: 250px;
+}
+
+#l2{
+    float: left;
+}
+/* pripomienkovac css end*/
+
 .global-center
 {
     margin: auto;
@@ -800,4 +850,46 @@ img.pamiatka-clicked
 .row, .navbar
 {
     margin-right: 0 !important;
+}
+
+@media print {
+    nav 
+    {
+        display: none;
+    }
+    
+    footer
+    {
+        display: none;
+    }
+
+    .col-sm-6
+    {
+        width: 100%;
+    }
+
+    #breadcrumbs
+    {
+        display: none;
+    }
+
+    #meniny
+    {
+        display: none;
+    }
+
+    #image-map-wrapper
+    {
+        display: none;
+    }
+
+    #google-map-wrapper
+    {
+        width: 100%;
+    }
+
+    #pamiatky-timeline-wrapper
+    {
+        display: none;
+    }
 }

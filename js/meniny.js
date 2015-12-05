@@ -17,6 +17,29 @@ window.onload = g;
 function g() {
         date_time_meniny();
         //pridajListener(); //toto je na ten debilny DOM2 treba odkomentovat
+        $("#meno-form").submit(function(){
+            zobrazDatum();
+            return false;
+        }); 
+        
+        $("#datum-form").submit(function(){
+            zobrazMeno();
+            return false;
+        });
+        
+        $('#datum').popover({trigger: "manual"});
+
+        $("#datum").change(function(){
+            validujDatum();
+        });
+
+        $("#datum").focus(function(){
+            validujDatum();
+        });
+        
+        $("#datum").blur(function(){
+            validujDatum();
+        });
 }
  
 function date_time_meniny() {
@@ -214,13 +237,15 @@ function validujDatum(e) {
  
 //validacia datumu
 function validujDatum() {
-       
+       nacitajDatum();
         var regEx=/((^((0?[1-9])|([12][0-9])|([3][01]))[\.]((0?[13578])|(1[02]))[\.]?$)|(^((0?[1-9])|([12][0-9])|(30))[\.]((0?[469])|(11))[\.]?$)|(^((0?[1-9])|([12][0-9]))[\.](0?2)[\.]?$))/;
        
         if(!regEx.test(datum)) {//spravny datum
-                alert("Datum musi byt vo formate: dd.mm alebo d.m");
+                //alert("Datum musi byt vo formate: dd.mm alebo d.m");
+                $('#datum').popover("show");
                 return false;
         }
+        $('#datum').popover("hide");
         return true;
 }
  

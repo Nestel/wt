@@ -53,5 +53,12 @@ function checkCookie()
 function vypisCookie() 
 {
     var cookie = getCookie("visitCounter");
-    document.getElementById("visitCounter").innerHTML += cookie.split("=")[1];
+    
+    if (cookie == "")
+    {
+        checkCookie();
+        return;
+    }
+
+    document.getElementById("visitCounter").innerHTML += cookie;
 }

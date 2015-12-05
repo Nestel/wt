@@ -29,7 +29,24 @@ $(document).ready(function(){
     var poleRiesitel = [];
     var poleDokoncena = [];
     var polePoznamok = [];
- 
+
+    function writeToXml(noteArray)
+    {
+        var string = '<?xml version="1.0" encoding="UTF-8"?>';
+        string += '<poznamkovac>';
+
+        for (var i = 0; i < noteArray.length; i++)
+        {
+            string += "<poznamka>";
+            string += "<text>" + noteArray.text + "</text>";
+            string += "<riesitel>" + noteArray.riesitel + "</riesitel>";
+            string += "<dokoncena>" + noteArray.dokoncena + "</dokoncena>";
+            string += "</poznamka>";
+        }
+
+
+        string += '</poznamkovac>';
+    } 
 
     function myFunction(xml){
         xmlDoc = xml.responseXML;
@@ -56,6 +73,8 @@ $(document).ready(function(){
             addRow(polePoznamok[i],i+1);
             polePoznamok[i].isDisplayed = true;
         }
+
+        console.log(polePoznamok);
 /*
         for(var i = 0; i < polePoznamok.length; i++){
             console.log(polePoznamok[i].isDisplayed);
@@ -175,6 +194,15 @@ $(document).ready(function(){
             }
         });
 /**********************************************************************************/
+        var checkboxes = $(".checkbox");
+        checkboxes.each(function(){
+            $(this).click(function(){
+                if ($(this).prop('checked'))
+                {
+                    $(this).parent("td").parent("tr").remove();
+                }
+            });
+        });
     }
 });
 
@@ -189,8 +217,7 @@ function addRow(note, n) {
     /*row.insertCell(0).innerHTML= '<input type="button" value = "Delete" onClick="Javacsript:deleteRow(this)">';*/
     row.insertCell(0).innerHTML= n+". "+note.text;
     /*row.insertCell(1).innerHTML= myName.value;*/
-    row.insertCell(1).innerHTML= '<input type="checkbox" checked="true">';
-
+    row.insertCell(1).innerHTML= '<input type="checkbox" class="checkbox">';
 }
 
 function deleteRow(obj) {

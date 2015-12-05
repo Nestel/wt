@@ -2,9 +2,9 @@
 <html lang="sk">
 	<head>
 		<meta charset="UTF-8">
-		<meta name="author" content="Gabriel Kerekeš">
+		<meta name="author" content="Ján Kováč">
 
-		<title>Záverečná práca | EliteGroup</title>
+		<title>Krížovka | Záverečná práca</title>
 
 		<!-- bootstrap css -->
 		<link rel="stylesheet" href="css/bootstrap.min.css">
@@ -16,13 +16,14 @@
 		<script src="js/jquery.js"></script>
 		<!-- bootstrap javascript -->		
 		<script src="js/bootstrap.min.js"></script>
-		
+
 		<!-- menu javascript -->
 		<script src="js/menu.js"></script>
-		<!-- meniny javascript-->
+		<!-- meniny javascript -->
 		<script src="js/meniny.js" ></script>
-
+		<!-- counter javascript -->
 		<script src="js/counter.js"></script>
+		<!-- breadcrumbs javascript -->
 		<script src="js/breadcrumbs.js"></script>
 
 		<script type="text/JavaScript" src="js/plotly-latest.min.js"></script>
@@ -40,7 +41,7 @@
         				<span class="icon-bar"></span>
         				<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="/zp/">Záverečná práca</a>
+					<a class="navbar-brand" href="index.html">Záverečná práca</a>
     			</div>
 
 				<!-- Collect the nav links, forms, and other content for toggling -->
@@ -50,7 +51,7 @@
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
 						<li>
-							<form submit="return false" class="navbar-form navbar-right" role="searchName" id="meno-form">
+							<form class="navbar-form navbar-right" id="meno-form">
 								<div class="form-group">
 									<input class="nsSmall form-control" type="text" id="meno" placeholder="Meno"/>
 								</div>
@@ -58,9 +59,9 @@
 							</form>
 						</li>
 						<li>
-							<form submit="return false;" class="navbar-form navbar-right" role="searchDate">
+							<form class="navbar-form navbar-right" id="datum-form">
 								<div class="form-group">
-									<input class="nsSmall form-control" type="text" id="datum" placeholder="Dátum"/>
+									<input class="nsSmall form-control" type="text" id="datum" placeholder="Dátum" data-toggle="popover" data-placement="bottom" data-content="Dátum musí byť vo formáte: dd.mm alebo d.m"/>
 								</div>
 								<button onclick="zobrazMeno()" type="button" class="btn btn-primary">Nájdi meno</button>
 							</form>
@@ -68,7 +69,7 @@
 					</ul>
 				</div><!-- /.navbar-collapse -->
 			</div><!-- /.container-fluid -->
-		</nav>		
+		</nav>				
 
         <div class="row">
             <div class="col-sm-6">
@@ -87,7 +88,7 @@
         </div>
 			
 		<section>		
-			<h1>Krížovka</h1>
+			<h2>Krížovka</h2>
 			<hr>
 
 			<div class="row">
@@ -97,26 +98,24 @@
 				
 				<div class="col-sm-4">
 					<p class="text-center">pozn. Pozor, riešenie je závislé od diakritiky!!!</p>
-					<p>
-						Nápoveda:<br/>
-						<div id="napoveda"></div>
-					</p>
+
+					Nápoveda:<br/>
+					<div id="napoveda"></div>
 					
 					<hr/>
-				
-					<p>
-						<div id="body"></div>
-						<br>
-						<div class="row">
-							<div class="col-sm-6">
-								<button id="dateButton" class="btn btn-success form-control" onclick="kontrolujRiesenie()">Kontroluj riešenie</button> 
-							</div>
-							<div class="col-sm-6">
-								<button id="generateButton" class="btn btn-danger form-control" onclick="generujKrizovku()">Generuj novú krížovku</button>
-							</div>
+
+					<div id="body"></div>
+					<br>
+					<div class="row">
+						<div class="col-sm-6">
+							<button id="dateButton" class="btn btn-success form-control" onclick="kontrolujRiesenie()">Kontroluj riešenie</button> 
 						</div>
-						<div id="x">
+						<div class="col-sm-6">
+							<button id="generateButton" class="btn btn-danger form-control" onclick="generujKrizovku()">Generuj novú krížovku</button>
 						</div>
+					</div>
+					<div id="x">
+					</div>
 				</div>
 			</div>
 		</section>

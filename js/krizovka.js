@@ -189,6 +189,7 @@ function kontrolujRiesenie() {
 		document.getElementById('x').innerHTML += "<p class=\"bg-success\">" + "Riešenie je SPRÁVNE!" + "<\p>";
 		document.getElementById('body').innerHTML = "Získavate " +bodyKrizovka+ " body.";
 		saveScoreToCookie();
+		printScoresGraph();
 	}
 	else {
 		bodyKrizovka--;
@@ -196,6 +197,7 @@ function kontrolujRiesenie() {
 		document.getElementById('x').innerHTML += "<p class=\"bg-danger\">" + "Riešenie je NESPRÁVNE!" + "<\p>";
 		if(bodyKrizovka == 0) {
 			saveScoreToCookie();
+			printScoresGraph();
 		}
 	}
 }
@@ -231,7 +233,7 @@ function scoresToInt(scores) {
 }
 
 function getAllScores() {
-	var scoresCookie = getCookie(SCORES_COOKIE_NAME);
+	var scoresCookie = getGameCookie(SCORES_COOKIE_NAME);
 
 	//split the cookie
 	//scoresCookie[0] is cookie name
@@ -240,7 +242,7 @@ function getAllScores() {
 	return scores;
 }
 
-function getCookie(name) {
+function getGameCookie(name) {
 	//get all current cookies
 	var allCookies = document.cookie;
 	//split the cookies into an array with ; as the delimiter
@@ -256,10 +258,11 @@ function getCookie(name) {
 			break;
 		}
 	}
-	
-	if(searchedCookie == undefined){
-		searchedCookie = name +"=";
-	}
+
+	if (searchedCookie == undefined)
+    {
+        searchedCookie = name + "=";
+    }
 	
 	return searchedCookie;
 }
