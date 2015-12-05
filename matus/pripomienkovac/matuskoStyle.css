@@ -1,0 +1,30 @@
+body{
+	padding-left: 20px;
+}
+
+#divPoznamkovac{
+
+	position: absolute;
+
+	
+	max-width: 800px;
+
+	/*border-style: solid;
+	border-width: 1px;*/
+}
+
+#c1{
+	font-size: 10px;
+	max-width: 400px;
+
+	position: absolute;
+	left: 0px;
+}
+
+#sel1{
+	max-width: 250px;
+}
+
+#l2{
+	float: left;
+}
